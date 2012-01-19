@@ -28,13 +28,62 @@
 
 ## 测试结果: fetches/sec
 
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(function() {
+  var datas = [
+    ['0', 8157, null, 7490, null, 7130],
+    ['1', 8240, null, 7975, 9347, 7136],
+    ['2', 8138, 8127, 7965, 9200, 7410],
+    ['3', 8070, 7931, 7930, 8999, 7500],
+    ['4', 8111, null, 7981, 9000, 7488],
+    ['5', 8060, 8073, 7960, 8880, 7480],
+    ['6', 8046, 6995, 7931, 7815, 7525],
+    ['7', 7791, 7098, 7916, 7871, null],
+    ['8', null, 7071, 6588, 7810, null],
+    ['9', null, 7259, 7606, null, null],
+    ['10', null, 8200, 7600, null, null],
+    ['11', null, null, 7558, null, null],
+    ['12', null, null, 7510, null, null]
+  ];
+  var versions = ['v0.6.x', 'v0.5.x', 'v0.4.x', 'v0.3.x', 'v0.2.x'];
+  drawChart(versions, datas);
+});
+
+function drawChart(versions, datas) {
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Version');
+  for (var i = 0; i < versions.length; i++) {
+    data.addColumn('number', versions[i] + ' QPS');
+  }
+  data.addRows(datas);
+  var options = {
+    width: 800, height: 500,
+    title: '"Hello world" benchmark in Nodejs'
+  };
+  var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
+}
+</script>
+<div id="chart_div"></div>
+
+* v0.7.x
+<table>
+    <tr>
+        <th>0.7.0</th>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+</table>
 * v0.6.x
 <table>
     <tr>
-        <th>0.6.5</th><th>0.6.4</th><th>0.6.3</th><th>0.6.2</th><th>0.6.1</th><th>0.6.0</th>
+        <th>0.6.7</th><th>0.6.6</th><th>0.6.5</th><th>0.6.4</th><th>0.6.3</th><th>0.6.2</th><th>0.6.1</th><th>0.6.0</th>
     </tr>
     <tr>
-        <td>8060.28</td><td>8111</td><td>8070</td><td>8137.79</td><td>8239.6</td><td>8157.38</td>
+        <td>7790.79</td><td>8046.29</td><td>8060.28</td><td>8111</td><td>8070</td><td>8137.79</td><td>8239.6</td><td>8157.38</td>
     </tr>
 </table>
 * v0.5.x
@@ -117,6 +166,20 @@
     startup.js                  152.81 ms   52.04 ms
 
 v0.4 和 v0.6之间的更新说明请查看: [API-changes-between-v0.4-and-v0.6](https://github.com/joyent/node/wiki/API-changes-between-v0.4-and-v0.6)
+
+## node0.6.7
+```
+7790.79 fetches/sec, 93489.5 bytes/sec
+msecs/connect: 0.052154 mean, 0.716 max, 0.023 min
+msecs/first-response: 12.7397 mean, 41.609 max, 5.318 min
+```
+
+## node0.6.6
+```
+8046.29 fetches/sec, 96555.5 bytes/sec
+msecs/connect: 0.0517639 mean, 0.396 max, 0.023 min
+msecs/first-response: 12.3359 mean, 36.495 max, 4.808 min
+```
 
 ## node0.6.5
 

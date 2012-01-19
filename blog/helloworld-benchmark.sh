@@ -1,5 +1,6 @@
 #!/bin/bash
 
+./node -v
 ./node $HOME/helloworld.js &
 node_pid=$!
 sleep 1
