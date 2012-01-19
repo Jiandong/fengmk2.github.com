@@ -41,7 +41,7 @@ ndir.walk('./', function(dir, files, dirs) {
   var indexfile = path.join(dir, 'index.md');
   var needIndex = dir !== __dirname;
   if (needIndex) {
-    if (dir.indexOf('/blog') < 0) {
+    if (dir.indexOf('/blog') < 0 && dir.indexOf('/collections') < 0) {
       return;
     }
     var dirurl = dir.replace(__dirname, '');
@@ -58,7 +58,7 @@ ndir.walk('./', function(dir, files, dirs) {
         var mdpath = info[0].replace(/\.html$/, '.md');
         if (path.existsSync(mdpath)) {
           var md = fs.readFileSync(mdpath, 'utf-8');
-          var title = md.split('\n', 1)[0].substring(2); // skip `# `
+          var title = md.split('\n', 1)[0].substring(1); // skip `#`
           name = title;
         }
       } else {
