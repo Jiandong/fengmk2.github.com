@@ -16,8 +16,6 @@ var fs = require('fs');
 var page_layout = path.join(__dirname, 'page-layout.html');
 var layout = path.join(__dirname, 'layout.html');
 
-var 
-
 var walker = ndir.walk('./', function(dir, files) {
   if (dir.indexOf('/.git') >= 0) {
     return;

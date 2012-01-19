@@ -1,13 +1,27 @@
 # MK2's Blog use markdown in github
 
 ## Who is MK2
-
+![mk2 photo](https://secure.gravatar.com/avatar/95b9d41231617a05ced5604d242c9670?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png)
 * Github: [@fengmk](https://github.com/fengmk2)
 * Weibo: [@Python发烧友](http://weibo.com/imk2)
 * Twitter: [@fengmk2](http://twitter.com/fengmk2)
 * 腾讯微博: [@fengmk2](http://t.qq.com/fengmk2)
 * CNblogs: [让生活Web个够](http://fengmk2.cnblogs.com/)
 * Node Club: [@suqian](http://club.cnodejs.org/user/suqian)
+
+## Projects
+
+* [node-weibo](https://github.com/fengmk2/node-weibo): weibo nodejs sdk
+* [nodeblog](https://github.com/fengmk2/nodeblog): A blog system base on nodejs. 
+* [ndir](https://github.com/fengmk2/ndir): The lost dir util tools. 
+* [mdit](https://github.com/fengmk2/mdit): Markdown it, yes, everything!
+* [tjob](https://github.com/fengmk2/tjob): tao job in social network
+* [nodebox](https://github.com/fengmk2/nodebox): A file box base on nodejs.
+* [metaweblog](https://github.com/fengmk2/metaweblog): MetaWeblog API on Nodejs
+* [urlrar](https://github.com/fengmk2/urlrar): Expand any shorten url for you
+* [urllib](https://github.com/fengmk2/urllib): Help in opening URLs (mostly HTTP) in a complex world — basic and digest authentication, redirections, cookies and more. Like python's _urllib_ module.
+* [FaWave](https://chrome.google.com/webstore/detail/aicelmgbddfgmpieedjiggifabdpcnln): FaWave, is a Chrome extension supporting multiple microblogging, which can make all microblogs synchronously updating, work seamlessly across multiple microblogs when you switch between them.
+<br/>![fawave prev](http://ww2.sinaimg.cn/large/6cfc7910jw1dp88kwaao5j.jpg)
 
 ## Articles
 
@@ -17,7 +31,7 @@
 * [Blog/2009](/blog/2009)
 * [Blog](/blog/)
 
-## MK2's Slides
+## Slides
 
 * [Unit Test in Nodejs](/ppt/unittest-and-bdd-in-nodejs-with-mocha.html)
 * [Nodejs, 脱离了浏览器的Javascript](/ppt/qcon2011/index.html)
