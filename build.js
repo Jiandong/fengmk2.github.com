@@ -16,6 +16,8 @@ var fs = require('fs');
 var page_layout = path.join(__dirname, 'page-layout.html');
 var layout = path.join(__dirname, 'layout.html');
 
+var 
+
 var walker = ndir.walk('./', function(dir, files) {
   if (dir.indexOf('/.git') >= 0) {
     return;
@@ -46,7 +48,13 @@ walker.on('end', function() {
       return;
     }
     files.sort(function(a, b) {
-      return a[0].replace(__dirname, '') > b[0].replace(__dirname, '') ? -1 : 1;
+      if (a[1].isFile() && !b[1].isFile()) {
+        return 1;
+      }
+      if (!a[1].isFile() && b[1].isFile()) {
+        return -1;
+      }
+      return a[0] > b[0] ? -1 : 1;
     });
     var indexfile = path.join(dir, 'index.md');
     var needIndex = dir !== __dirname;

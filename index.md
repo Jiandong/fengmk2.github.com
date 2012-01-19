@@ -25,6 +25,7 @@
 
 ## Nodejs
 
+* [Defense hash algorithm collision 防御hash算法冲突导致拒绝服务器](/blog/2011/defense-hash-algorithm-collision-dos.html)
 * [Hash algorithm collision in Nodejs](/blog/2011/hac-in-nodejs-results.html)
 * [fibonacci(40) benchmark](/blog/2011/fibonacci/nodejs-python-php-ruby-lua.html)
 
