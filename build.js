@@ -46,7 +46,7 @@ walker.on('end', function() {
       return;
     }
     files.sort(function(a, b) {
-      return a[0] > b[0] ? 1 : -1;
+      return a[0].replace(__dirname, '') > b[0].replace(__dirname, '') ? -1 : 1;
     });
     var indexfile = path.join(dir, 'index.md');
     var needIndex = dir !== __dirname;
