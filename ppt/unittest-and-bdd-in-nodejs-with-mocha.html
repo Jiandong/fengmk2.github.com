@@ -1,44 +1,38 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  
-  <title> UnitTest in Nodejs   实战Nodejs单元测试 </title>
-  
-  <meta name="description" content="A jQuery library for modern HTML presentations">
-  <meta name="author" content="Caleb Troughton">
-  <meta name="viewport" content="width=1024, user-scalable=no">
-  
-  <!-- Core and extension CSS files -->
-  <link rel="stylesheet" href="/js/deck.js/core/deck.core.css">
-  <link rel="stylesheet" href="/js/deck.js/extensions/goto/deck.goto.css">
-  <link rel="stylesheet" href="/js/deck.js/extensions/menu/deck.menu.css">
-  <link rel="stylesheet" href="/js/deck.js/extensions/navigation/deck.navigation.css">
-  <link rel="stylesheet" href="/js/deck.js/extensions/status/deck.status.css">
-  <link rel="stylesheet" href="/js/deck.js/extensions/hash/deck.hash.css">
-  
-  <!-- Theme CSS files (menu swaps these out) -->
-  <link rel="stylesheet" id="style-theme-link" href="/js/deck.js/themes/style/neon.css">
-  <link rel="stylesheet" id="transition-theme-link" href="/js/deck.js/themes/transition/horizontal-slide.css">
-  
-  <!-- Custom CSS just for this page -->
+  <meta charset="utf-8" />
+  <meta name="description" content="MK2's blog，生命是一场幻觉，代码是一段人生。"/>
+  <link rel="stylesheet" href="/css/typo.css" />
   <link rel="stylesheet" href="/css/prettify.css">
-  
-  <script src="/js/deck.js/modernizr.custom.js"></script>
+  <script src="/js/jquery-1.7.min.js"></script>
+  <script src="/js/prettify.js"></script>
+  <title>UnitTest in Nodejs <br/> 实战Nodejs单元测试</title>
+  <style>
+     body {
+      font-family: Helvetica, Arial, FreeSans, san-serif;
+     }
+     a{color:#09f;}
+     code{color:#080;}
+     h1, #tagline{display:inline;}
+     #wrapper{padding:5% 8%;min-width:480px;}
+     #tagline{font:0.8em serif;color:#888;display:inline-block;margin:0.1em 0 1.2em;}
+     #fork{position:fixed;top:0;right:0;_position:absolute;}
+  </style>
 </head>
+<body>
 
-<body class="deck-container">
+<div id="wrapper" class="typo">
 
+<div id="header">
+</div>
 
-<section class="slide"><h1>UnitTest in Nodejs <br/> 实战Nodejs单元测试</h1>
+<div id="content">
+<h1>UnitTest in Nodejs <br/> 实战Nodejs单元测试</h1>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>大纲</h2>
 
 <ul>
@@ -47,9 +41,8 @@
 <li>实战短址还原的单元测试</li>
 </ul>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>为什么要单元测试</h2>
 
 <h3>明显没错的代码</h3>
@@ -69,9 +62,8 @@
   };
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>没明显错的代码</h2>
 
 <p><a href="https://github.com/felixge/node-mysql/blob/ecbb9f95d05348713e792e331412fa233095f798/lib/query.js#L65">node-mysql/lib/query.js#L65</a></p>
@@ -83,9 +75,8 @@
 }
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>明显有错的代码</h2>
 
 <p><a href="https://github.com/joyent/node/blob/9a059ea69e1f6ebd8899246682d8ca257610b8ab/lib/http.js#L961">node0.6.6 - lib/http.js</a></p>
@@ -109,9 +100,8 @@
 };
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>为什么要单元测试</h2>
 
 <h3>代码质量</h3>
@@ -130,16 +120,14 @@
 
 <p>全是绿灯！<br />单元测试全部跑通！</p>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>眼花缭乱的Nodejs测试模块</h2>
 
 <p><img src="http://ww1.sinaimg.cn/large/6cfc7910jw1doil8n1kq0j.jpg" alt="unit test in npm" title="" /></p>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2><a href="https://github.com/joyent/node/wiki/modules#wiki-testing">Testing / Spec Frameworks</a></h2>
 
 <ul>
@@ -152,9 +140,8 @@
 
 <p>BDD: behaviour-driven development</p>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>如何选择</h2>
 
 <ul>
@@ -165,16 +152,14 @@
 <li>持续改进</li>
 </ul>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>Mocha ，我喜欢</h2>
 
 <p><img src="http://ww2.sinaimg.cn/large/6cfc7910jw1doimelmi7hj.jpg" alt="Mocha's Features" title="" /></p>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>Mocha 强大的特性列表</h2>
 
 <ul>
@@ -190,9 +175,8 @@
 <li>......</li>
 </ul>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>should.js 我应该</h2>
 
 <p>我承认，我是@TJ 忠实粉丝...<br />还有，我喜欢 should 的方式:</p>
@@ -202,21 +186,18 @@
 <li>让懂英文的产品经理能基本看懂测试用例</li>
 </ul>
 
-</section>
+<hr />
 
-<section class="slide">
 <h1>A cup of <code>Mocha</code>, <br/>test cases <code>should</code> pass.</h1>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>实战短址还原的单元测试</h2>
 
 <p>短址还原: <a href="https://github.com/fengmk2/urlrar">urlrar</a><br /><img src="http://app.qpic.cn/mblogpic/601eaf76bf09d4d8e484/2000" alt="preview" title="" /></p>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>代码目录，创建响应空文件</h2>
 
 <pre><code>├─┬ lib/
@@ -234,9 +215,8 @@
 └── RERAME.md
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>Makefile</h2>
 
 <pre><code>SRC = $(shell find lib -type f -name "*.js")
@@ -256,9 +236,8 @@ test:
 <pre><code>$ make test
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>mocha.opts</h2>
 
 <h3>自定义mocha更多参数，例如自动引用一些测试依赖的模块</h3>
@@ -267,9 +246,8 @@ test:
 --require test/support/http.js
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>方便地进行 http 测试</h2>
 
 <p><code>test/support/http.js</code></p>
@@ -288,9 +266,8 @@ test:
 });
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>确定需求和应用功能</h2>
 
 <h3>需求</h3>
@@ -309,9 +286,8 @@ test:
 <li>支持JSONP的短还原API</li>
 </ul>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>行为驱动开发: 实现 “主页面显示介绍和表单”</h2>
 
 <p>直接写测试吧：<code>test/app.test.js</code> </p>
@@ -324,9 +300,8 @@ describe('urlrar app', function() {
   });
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>将需求变成测试用例</h2>
 
 <pre><code>  it('GET / should show the title, a form and a text input', function(done) {
@@ -345,9 +320,8 @@ describe('urlrar app', function() {
 });
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>疯了吧？！直接运行测试</h2>
 
 <pre><code>$ make test
@@ -355,9 +329,8 @@ describe('urlrar app', function() {
 
 <p><img src="http://ww4.sinaimg.cn/large/6cfc7910jw1doiqgenjt8j.jpg" alt="first test error" title="" /></p>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>实现app.js</h2>
 
 <pre><code>var http = require('http');
@@ -378,9 +351,8 @@ var app = http.createServer(function(req, res) {
 module.exports = app;
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>再次运行测试</h2>
 
 <pre><code>$ make test
@@ -388,9 +360,8 @@ module.exports = app;
 
 <p><img src="http://ww3.sinaimg.cn/large/6cfc7910jw1doiqk4qnvtj.jpg" alt="index page run success" title="" /></p>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>将应用API和404页面完成</h2>
 
 <pre><code>  it('GET /api should have an api', function(done) {
@@ -412,9 +383,8 @@ module.exports = app;
 
 <p><img src="http://ww4.sinaimg.cn/large/6cfc7910jw1doiqorpn1zj.jpg" alt="3 more tests" title="" /></p>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>实现还原功能</h2>
 
 <h3><code>lib/urllib.js</code> 模块来处理</h3>
@@ -427,9 +397,8 @@ urllib.expand(shortenURL, function(err, longURL, redirectCount) {
 });
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>urllib.test.js</h2>
 
 <h3>Test Cases</h3>
@@ -446,9 +415,8 @@ urllib.expand(shortenURL, function(err, longURL, redirectCount) {
 ];
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>正常使用方式测试</h2>
 
 <pre><code>var desc = 'should expand ' + mapping.length + ' shorten urls success';
@@ -469,9 +437,8 @@ it(desc, function(done) {
 })
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>urllib.js#expand()实现</h2>
 
 <pre><code>exports.expand = function(url, callback) {
@@ -486,9 +453,8 @@ it(desc, function(done) {
   var req = request(options);
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>urllib.js#expand()实现2</h2>
 
 <pre><code>  if (callback.__redirectCounter === undefined) {
@@ -510,9 +476,8 @@ it(desc, function(done) {
 exports.maxRedirect = 5;
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>非法输入参数情况</h2>
 
 <pre><code>it('should return empty string when shorturl set wrong', function(done) {
@@ -539,9 +504,8 @@ it('should throw error when pass null', function() {
 });
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>服务器异常怎么办？</h2>
 
 <pre><code>  describe('#expand() server Error', function() {
@@ -565,9 +529,8 @@ it('should throw error when pass null', function() {
   });
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>处理异常</h2>
 
 <pre><code>  var req = request(options);
@@ -578,9 +541,8 @@ it('should throw error when pass null', function() {
     // ...
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>实现 API 功能</h2>
 
 <h3>测试先行</h3>
@@ -596,9 +558,8 @@ it('should throw error when pass null', function() {
 });
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>实现代码</h2>
 
 <pre><code>var app = http.createServer(function(req, res) {
@@ -622,9 +583,8 @@ it('should throw error when pass null', function() {
 });
 </code></pre>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>绿灯通行</h2>
 
 <pre><code>$ make test
@@ -632,9 +592,8 @@ it('should throw error when pass null', function() {
 
 <p><img src="http://app.qpic.cn/mblogpic/de91b739e009ccf50438/2000" alt="test all pass" title="" /></p>
 
-</section>
+<hr />
 
-<section class="slide">
 <h2>更多好的示例</h2>
 
 <ul>
@@ -645,49 +604,27 @@ it('should throw error when pass null', function() {
 <li><a href="https://github.com/visionmedia/mocha/tree/master/test">Mocha</a></li>
 </ul>
 
-</section>
+<hr />
 
-<section class="slide">
-<h1>QA === 知乎者也</h1></section>
+<h1>QA === 知乎者也</h1>
+</div>
 
+<div id="footer">
+</div>
 
-<p class="deck-status">
-  <span class="deck-status-current"></span>
-  /
-  <span class="deck-status-total"></span>
-</p>
+</div> <!-- #wrapper -->
 
-<form action="." method="get" class="goto-form">
-  <label for="goto-slide">Go to slide:</label>
-  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
-  <datalist id="goto-datalist"></datalist>
-  <input type="submit" value="Go">
-</form>
-
-<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
-
-
-<!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
-<script>window.jQuery || document.write('<script src="/js/deck.js/jquery-1.7.min.js"><\/script>')</script>
-<script src="/js/prettify.js"></script>
-
-<!-- Deck Core and extensions -->
-<script src="/js/deck.js/core/deck.core.js"></script>
-<script src="/js/deck.js/extensions/hash/deck.hash.js"></script>
-<script src="/js/deck.js/extensions/menu/deck.menu.js"></script>
-<script src="/js/deck.js/extensions/goto/deck.goto.js"></script>
-<script src="/js/deck.js/extensions/status/deck.status.js"></script>
-<script src="/js/deck.js/extensions/navigation/deck.navigation.js"></script>
+<a href="https://github.com/fengmk2/mk2blog" id="fork">
+    <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+</a>
 
 <!-- Specific to this page -->
 <script>
 $(function() {
   // Deck initialization
-  $.deck('.slide');
   $('pre code').parent().addClass('prettyprint');
   prettyPrint();
 });
 </script>
-
 </body>
 </html>

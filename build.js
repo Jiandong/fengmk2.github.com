@@ -9,5 +9,23 @@
  */
 
 var mdit = require('../mdit');
+var ndir = require('../ndir');
+var path = require('path');
 
-mdit.toHTML('./index.md', './layout.html');
+var layout = path.join(__dirname, 'layout.html');
+
+ndir.walk('./', function(dir, files) {
+  var needIndex = !path.existsSync(path.join(dir, 'index.html'));
+  for (var i = 0, l = files.length; i < l; i++) {
+    var info = files[i];
+    if (info[1].isFile()) {
+      var ext = path.extname(info[0]);
+      if (ext === '.md') {
+        // console.log(info[0], '==>')
+        // var out = mdit.toHTML(info[0], layout);
+        // console.log(out);
+      }
+    }
+  }
+});
+

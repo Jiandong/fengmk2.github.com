@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="MK2's blog，生命是一场幻觉，代码是一段人生。"/>
+  <link rel="stylesheet" href="/css/typo.css" />
+  <link rel="stylesheet" href="/css/prettify.css">
+  <script src="/js/jquery-1.7.min.js"></script>
+  <script src="/js/prettify.js"></script>
+  <title>jQuery</title>
+  <style>
+     body {
+      font-family: Helvetica, Arial, FreeSans, san-serif;
+     }
+     a{color:#09f;}
+     code{color:#080;}
+     h1, #tagline{display:inline;}
+     #wrapper{padding:5% 8%;min-width:480px;}
+     #tagline{font:0.8em serif;color:#888;display:inline-block;margin:0.1em 0 1.2em;}
+     #fork{position:fixed;top:0;right:0;_position:absolute;}
+  </style>
+</head>
+<body>
+
+<div id="wrapper" class="typo">
+
+<div id="header">
+</div>
+
+<div id="content">
+<h1>jQuery</h1>
+
+<ul>
+<li><a href="http://arborjs.org/">a graph visualization library using web workers and jQuery</a></li>
+<li><a href="http://www.catswhocode.com/blog/10-awesome-jquery-snippets">10 awesome jQuery snippets</a>, <a href="http://www.oschina.net/code/snippet_12_7271">10 个很棒的 jQuery 代码片段</a></li>
+<li><a href="http://www.haipi8.com/javascript/232">jQuery中.bind(),.live()和.delegate()的区别</a>, <a href="http://www.alfajango.com/blog/the-difference-between-jquerys-bind-live-and-delegate/">English Version</a></li>
+</ul>
+</div>
+
+<div id="footer">
+</div>
+
+</div> <!-- #wrapper -->
+
+<a href="https://github.com/fengmk2/mk2blog" id="fork">
+    <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+</a>
+
+<!-- Specific to this page -->
+<script>
+$(function() {
+  // Deck initialization
+  $('pre code').parent().addClass('prettyprint');
+  prettyPrint();
+});
+</script>
+</body>
+</html>

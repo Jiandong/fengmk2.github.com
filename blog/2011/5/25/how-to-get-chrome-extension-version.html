@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="MK2's blog，生命是一场幻觉，代码是一段人生。"/>
+  <link rel="stylesheet" href="/css/typo.css" />
+  <link rel="stylesheet" href="/css/prettify.css">
+  <script src="/js/jquery-1.7.min.js"></script>
+  <script src="/js/prettify.js"></script>
+  <title>在Chrome插件上获取当前插件的版本号</title>
+  <style>
+     body {
+      font-family: Helvetica, Arial, FreeSans, san-serif;
+     }
+     a{color:#09f;}
+     code{color:#080;}
+     h1, #tagline{display:inline;}
+     #wrapper{padding:5% 8%;min-width:480px;}
+     #tagline{font:0.8em serif;color:#888;display:inline-block;margin:0.1em 0 1.2em;}
+     #fork{position:fixed;top:0;right:0;_position:absolute;}
+  </style>
+</head>
+<body>
+
+<div id="wrapper" class="typo">
+
+<div id="header">
+</div>
+
+<div id="content">
+<h1>在Chrome插件上获取当前插件的版本号</h1>
+
+<h2>问题：如何获取Chrome插件版本号</h2>
+
+<p>翻遍了<a href="http://code.google.com/chrome/extensions/api_index.html">Chrome插件开发文档</a>，依然无法找到如何获取当前版本号。<br />仔细想想，版本号其实就在开发者配置的manifest.json文件上定义的，如果能读取此文件数据，就等于得到版本号信息了。</p>
+
+<h2>解决</h2>
+
+<p>没错，请求manifest.json文件，读取version数据。</p>
+
+<pre><code>var version = null;
+$.get(chrome.extension.getURL('manifest.json'), function(info){
+    version = info.version;
+}, 'json');
+</code></pre>
+
+<h2>chrome.app.getDetails() 方法</h2>
+
+<p>在Console调试窗口，我发现chrome.appchrome.app.getDetails()方法<br /><img src="http://ww2.sinaimg.cn/large/6cfc7910jw1dhjnh6ac7rj.jpg" alt="getDetails()" title="" /></p>
+
+<p>不过此API目前无法搜索到相关文档，经测试发现只有在Chrome12以上版本才有。</p>
+
+<h2>有爱</h2>
+
+<p>^_^ 希望本文对你有用。</p>
+</div>
+
+<div id="footer">
+</div>
+
+</div> <!-- #wrapper -->
+
+<a href="https://github.com/fengmk2/mk2blog" id="fork">
+    <img alt="Fork me on GitHub" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+</a>
+
+<!-- Specific to this page -->
+<script>
+$(function() {
+  // Deck initialization
+  $('pre code').parent().addClass('prettyprint');
+  prettyPrint();
+});
+</script>
+</body>
+</html>
