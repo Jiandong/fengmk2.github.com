@@ -11,25 +11,33 @@
 
 ## Articles
 
+* [Blog/2012](/blog/2012)
+* [Blog/2011](/blog/2011)
+* [Blog/2010](/blog/2010)
+* [Blog/2009](/blog/2009)
+* [Blog](/blog/)
+
 ## MK2's Slides
 
-* [Unit Test in Nodejs](./ppt/unittest-and-bdd-in-nodejs-with-mocha.html)
-* [Nodejs, 脱离了浏览器的Javascript](./ppt/qcon2011/index.html)
-* [Nodejs实践二三事](./ppt/those-things-using-nodejs/index.html)
+* [Unit Test in Nodejs](/ppt/unittest-and-bdd-in-nodejs-with-mocha.html)
+* [Nodejs, 脱离了浏览器的Javascript](/ppt/qcon2011/index.html)
+* [Nodejs实践二三事](/ppt/those-things-using-nodejs/index.html)
 
 ## Nodejs
 
-* [Hash algorithm collision in Nodejs](./blog/2011/hac-in-nodejs-results.html)
+* [Hash algorithm collision in Nodejs](/blog/2011/hac-in-nodejs-results.html)
+* [fibonacci(40) benchmark](/blog/2011/fibonacci/nodejs-python-php-ruby-lua.html)
 
 ## Application
 
-* [CNodejs抽奖程序](./lottery/index.html)
-* [NAE-CLI](./nae-cli.html)
+* [NAE-CLI](/nae-cli.html)
+* [CNodejs抽奖程序](/lottery/index.html)
+* [Draw Text with Canvas](/blog/2011/canvas-text.html)
 
-## Collections
+## [Collections](/collections)
 
-* [jQuery](./collections/jquery.html)
-* [CSS](./collections/css.html)
+* [jQuery](/collections/jquery.html)
+* [CSS](/collections/css.html)
 
 ## Clone MK2's Blog
 
