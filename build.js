@@ -21,7 +21,11 @@ if (fs.statSync(root).isFile()) {
   if (/\/index\.md$/.test(root)) {
     var out = mdit.toHTML(root, layout);
   } else if (/\.md$/.test(root)) {
-    var out = mdit.toHTML(root, page_layout);
+    if (root.indexOf('/ppt/') >= 0) {
+      var out = mdit.toSlides(root);
+    } else {
+      var out = mdit.toHTML(root, page_layout);
+    }
   } else {
     var out = root + ' is not a markdown.';
   }
