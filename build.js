@@ -16,7 +16,20 @@ var fs = require('fs');
 var page_layout = path.join(__dirname, 'page-layout.html');
 var layout = path.join(__dirname, 'layout.html');
 
-var walker = ndir.walk('./', function(dir, files) {
+var root = process.argv[2] ? path.join(__dirname, process.argv[2]) : __dirname;
+if (fs.statSync(root).isFile()) {
+  if (/\/index\.md$/.test(root)) {
+    var out = mdit.toHTML(root, layout);
+  } else if (/\.md$/.test(root)) {
+    var out = mdit.toHTML(root, page_layout);
+  } else {
+    var out = root + ' is not a markdown.';
+  }
+  console.log(out);
+  return;
+}
+
+var walker = ndir.walk(root, function(dir, files) {
   if (dir.indexOf('/.git') >= 0) {
     return;
   }
@@ -54,7 +67,7 @@ walker.on('end', function() {
       }
       return a[0] > b[0] ? -1 : 1;
     });
-    var indexfile = path.join(dir, 'index.md');
+    var indexfile = path.join(dir, '__index.md');
     var needIndex = dir !== __dirname;
     if (needIndex) {
       if (dir.indexOf('/blog') < 0 && dir.indexOf('/collections') < 0) {

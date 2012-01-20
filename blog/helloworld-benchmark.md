@@ -74,16 +74,16 @@ function drawChart(versions, datas) {
         <th>0.7.0</th>
     </tr>
     <tr>
-        <td></td>
+        <td>7676</td>
     </tr>
 </table>
 * v0.6.x
 <table>
     <tr>
-        <th>0.6.7</th><th>0.6.6</th><th>0.6.5</th><th>0.6.4</th><th>0.6.3</th><th>0.6.2</th><th>0.6.1</th><th>0.6.0</th>
+      <th>0.6.7</th><th>0.6.6</th><th>0.6.5</th><th>0.6.4</th><th>0.6.3</th><th>0.6.2</th><th>0.6.1</th><th>0.6.0</th>
     </tr>
     <tr>
-        <td>7790.79</td><td>8046.29</td><td>8060.28</td><td>8111</td><td>8070</td><td>8137.79</td><td>8239.6</td><td>8157.38</td>
+      <td>7791</td><td>8046</td><td>8060</td><td>8111</td><td>8070</td><td>8138</td><td>8240</td><td>8157</td>
     </tr>
 </table>
 * v0.5.x
@@ -93,8 +93,8 @@ function drawChart(versions, datas) {
         <th>0.5.5</th><th>0.5.4</th><th>0.5.3</th><th>0.5.2</th><th>0.5.1</th><th>0.5.0</th>
     </tr>
     <tr>
-        <td>8200</td><td>7258.88</td><td>7070.8</td><td>7097.59</td><td>6995.6</td>
-        <td>8073.3</td><td>-</td><td>7931.39</td><td>8126.8</td><td>-</td><td>-</td>
+        <td>8200</td><td>7259</td><td>7071</td><td>7098</td><td>6996</td>
+        <td>8073</td><td>-</td><td>7931</td><td>8127</td><td>-</td><td>-</td>
     </tr>
 </table>
 * v0.4.x
@@ -105,9 +105,9 @@ function drawChart(versions, datas) {
         <th>0.4.3</th><th>0.4.2</th><th>0.4.1</th><th>0.4.0</th>
     </tr>
     <tr>
-        <td>7510</td><td>7557.79</td><td>7600</td><td>7605.7</td><td>6587.9</td>
-        <td>7916.1</td><td>7930.88</td><td>7960</td><td>7981.4</td>
-        <td>7929.9</td><td>7965.19</td><td>7975.19</td><td>7490</td>
+        <td>7510</td><td>7558</td><td>7600</td><td>7606</td><td>6588</td>
+        <td>7916</td><td>7931</td><td>7960</td><td>7981</td>
+        <td>7930</td><td>7965</td><td>7975</td><td>7490</td>
     </tr>
 </table>
 * v0.3.x
@@ -117,8 +117,8 @@ function drawChart(versions, datas) {
         <th>0.3.3</th><th>0.3.2</th><th>0.3.1</th><th>0.3.0</th>
     </tr>
     <tr>
-        <td>7810</td><td>7870.99</td><td>7814.89</td><td>8879.97</td><td>9000</td>
-        <td>8999.29</td><td>9200</td><td>9347.3</td><td>-</td>
+        <td>7810</td><td>7871</td><td>7815</td><td>8880</td><td>9000</td>
+        <td>8999</td><td>9200</td><td>9347</td><td>-</td>
     </tr>
 </table>
 * v0.2.x
@@ -128,8 +128,8 @@ function drawChart(versions, datas) {
         <th>0.2.2</th><th>0.2.1</th><th>0.2.0</th>
     </tr>
     <tr>
-        <td>7524.9</td><td>7480.6</td><td>7488.59</td><td>7500</td>
-        <td>7409.99</td><td>7135.9</td><td>7129.99</td>
+        <td>7525</td><td>7481</td><td>7489</td><td>7500</td>
+        <td>7410</td><td>7136</td><td>7130</td>
     </tr>
 </table>
 * v0.1.x
@@ -141,9 +141,9 @@ function drawChart(versions, datas) {
         <th>0.1.0</th>
     </tr>
     <tr>
-        <td>7640</td><td>7538.38</td><td>7537.49</td><td>7673.9</td><td>7040</td>
-        <td>7279.99</td><td>7210.6</td><td>7339.55</td><td>7269.6</td><td>7209.65</td>
-        <td>7063.39</td><td>7930.6</td><td>8019.99</td><td>8560.98</td><td>8146.18</td>
+        <td>7640</td><td>7538</td><td>7537</td><td>7674</td><td>7040</td>
+        <td>7280</td><td>7211</td><td>7340</td><td>7270</td><td>7210</td>
+        <td>7063</td><td>7931</td><td>8020</td><td>8561</td><td>8146</td>
         <td>-</td>
     </tr>
 </table>
@@ -166,6 +166,13 @@ function drawChart(versions, datas) {
     startup.js                  152.81 ms   52.04 ms
 
 v0.4 和 v0.6之间的更新说明请查看: [API-changes-between-v0.4-and-v0.6](https://github.com/joyent/node/wiki/API-changes-between-v0.4-and-v0.6)
+
+## node0.7.0
+```
+7675.8 fetches/sec, 92109.6 bytes/sec
+msecs/connect: 0.050985 mean, 1.047 max, 0.02 min
+msecs/first-response: 12.9343 mean, 47.329 max, 2.926 min
+```
 
 ## node0.6.7
 ```
