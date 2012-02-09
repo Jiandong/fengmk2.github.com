@@ -2,6 +2,8 @@
 
 ## Articles
 
+* [Ryan Dahl - History of Node.js](https://www.youtube.com/watch?v=SAc0vQCC6UQ)
+* [Staying up with Node.JS](http://www.devthought.com/2012/01/29/staying-up-with-node-js/)
 * [How To Write A Readme](http://blog.nodejitsu.com/how-to-write-a-readme)
 * [Travis CI At Nodejitsu](http://blog.nodejitsu.com/travis-ci-at-nodejitsu)
 * [JavaScript is Not Web Assembly](http://blog.izs.me/post/10213512387/javascript-is-not-web-assembly)

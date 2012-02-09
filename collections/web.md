@@ -1,5 +1,6 @@
 # Web
 
+* [Terminology, Syntax, & Introduction](http://learn.shayhowe.com/html-css/terminology-syntax-intro/)
 * [HTTP Status Cats](http://httpcats.herokuapp.com/)
 * [你应该了解的 一些web缓存相关的概念.](http://www.cnblogs.com/_franky/archive/2011/11/23/2260109.html)
 * [Web开发与运维安全浅见 PPT](http://www.slideshare.net/cfc4n/web-9330286), [Download](http://www.slideshare.net/cfc4n/web-9330286/download)
