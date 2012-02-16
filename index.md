@@ -6,7 +6,7 @@
 * Weibo: [@Python发烧友](http://weibo.com/imk2)
 * Twitter: [@fengmk2](http://twitter.com/fengmk2)
 * 腾讯微博: [@fengmk2](http://t.qq.com/fengmk2)
-* CNblogs: [让生活Web个够](http://fengmk2.cnblogs.com/)
+* cnblogs: [让生活Web个够](http://fengmk2.cnblogs.com/)
 * Node Club: [@suqian](http://club.cnodejs.org/user/suqian)
 * NodeBlog: [http://nodeblog.org/](http://nodeblog.org/)
 
@@ -48,7 +48,7 @@
 
 ## Application
 
-* [NAE-CLI](/nae-cli.html)
+* [NAE-CLI](http://club.cnodejs.org/topic/4f387648301a48d50e003d4c)
 * [CNodejs抽奖程序](/lottery/index.html)
 * [Draw Text with Canvas](/blog/2011/canvas-text.html)
 
