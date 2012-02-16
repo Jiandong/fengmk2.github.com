@@ -4,4 +4,4 @@ blog/.DS_Store
 .pydevproject
 .DS_Store
 blog/2011/.DS_Store
-
+*__index.html

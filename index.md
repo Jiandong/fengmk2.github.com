@@ -8,19 +8,20 @@
 * 腾讯微博: [@fengmk2](http://t.qq.com/fengmk2)
 * CNblogs: [让生活Web个够](http://fengmk2.cnblogs.com/)
 * Node Club: [@suqian](http://club.cnodejs.org/user/suqian)
-* NodeBlog: http://nodeblog.org/
+* NodeBlog: [http://nodeblog.org/](http://nodeblog.org/)
 
 ## Projects
 
 * [node-weibo](https://github.com/fengmk2/node-weibo): weibo nodejs sdk
 * [nodeblog](https://github.com/fengmk2/nodeblog): A blog system base on nodejs. 
-* [ndir](https://github.com/fengmk2/ndir): The lost dir util tools. 
+* [ndir](https://github.com/fengmk2/ndir) [![Build Status](https://secure.travis-ci.org/fengmk2/ndir.png)](http://travis-ci.org/fengmk2/ndir): The lost dir util tools. 
 * [mdit](https://github.com/fengmk2/mdit): Markdown it, yes, everything!
-* [tjob](https://github.com/fengmk2/tjob): tao job in social network
+* [tjob](https://github.com/TBEDP/tjob): tao job in social network
 * [nodebox](https://github.com/fengmk2/nodebox): A file box base on nodejs.
 * [metaweblog](https://github.com/fengmk2/metaweblog): MetaWeblog API on Nodejs
 * [urlrar](https://github.com/fengmk2/urlrar): Expand any shorten url for you
-* [urllib](https://github.com/fengmk2/urllib): Help in opening URLs (mostly HTTP) in a complex world — basic and digest authentication, redirections, cookies and more. Like python's _urllib_ module.
+* [urllib](https://github.com/TBEDP/urllib) [![Build Status](https://secure.travis-ci.org/TBEDP/urllib.png)](http://travis-ci.org/TBEDP/urllib): Help in opening URLs (mostly HTTP) in a complex world — basic and digest authentication, redirections, cookies and more. Like python's _urllib_ module.
+* [iFrame](https://github.com/windyrobin/iFrame): Nodejs code styles guide documents.
 * [FaWave](https://chrome.google.com/webstore/detail/aicelmgbddfgmpieedjiggifabdpcnln): FaWave, is a Chrome extension supporting multiple microblogging, which can make all microblogs synchronously updating, work seamlessly across multiple microblogs when you switch between them.
 <br/>![fawave prev](http://ww2.sinaimg.cn/large/6cfc7910jw1dp88kwaao5j.jpg)
 
