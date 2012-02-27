@@ -1,5 +1,8 @@
 # Javascript
 
+* [JavaScript date parsing and formatting, Part 1](http://www.xaprb.com/blog/2005/12/12/javascript-closures-for-runtime-efficiency/)
+* [google js style comments](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml#Comments)
+* [jsdoc tags](http://code.google.com/p/jsdoc-toolkit/wiki/TagReference)
 * [通过对象图学习JAVASCRIPT](http://www.trans4fun.org/tag/object-graphs/)
 * [Javascript绝句欣赏](http://site.douban.com/widget/notes/22456/note/142716442/)
 * [A Case Against Using CoffeeScript](http://ryanflorence.com/2011/2012/case-against-coffeescript/)

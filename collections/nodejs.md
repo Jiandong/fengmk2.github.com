@@ -2,6 +2,7 @@
 
 ## Articles
 
+* [使用node-inspector来调试node](http://blog.goddyzhao.me/post/11522397416/how-to-debug-node-with-node-inspector)
 * [Ryan Dahl - History of Node.js](https://www.youtube.com/watch?v=SAc0vQCC6UQ)
 * [Staying up with Node.JS](http://www.devthought.com/2012/01/29/staying-up-with-node-js/)
 * [How To Write A Readme](http://blog.nodejitsu.com/how-to-write-a-readme)
@@ -42,6 +43,7 @@
 
 ## Modules
 
+* [Moment.js](http://momentjs.com/): A lightweight javascript date library for parsing, manipulating, and formatting dates.
 * [Mocha - A great test framework for Node.js](http://www.bryandonovan.com/blog/2011/12/05/mocha-a-great-test-framework-for-nodejs/)
 * [node.js extensions with C++ and V8](http://kkaefer.github.com/node-cpp-modules/)
 * [nodegit](http://nodegit.github.com/)
