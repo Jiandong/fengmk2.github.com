@@ -71,7 +71,7 @@ walker.on('end', function() {
       }
       return a[0] > b[0] ? -1 : 1;
     });
-    var indexfile = path.join(dir, '__index.md');
+    var indexfile = path.join(dir, 'index.md');
     var needIndex = dir !== __dirname;
     if (needIndex) {
       if (dir.indexOf('/blog') < 0 && dir.indexOf('/collections') < 0) {
