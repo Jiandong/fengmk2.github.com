@@ -65,13 +65,5 @@
 ## Clone MK2's Blog
 
 ```
-$ git clone git://github.com/fengmk2/mk2blog
+$ git clone git://github.com/fengmk2/fengmk2.github.com
 ```
-
-<script type="text/javascript">
-(function() {
-  var c = document.createElement('script'); c.type = 'text/javascript'; c.async = true;
-  c.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.clicki.cn/boot/44957';
-  var h = document.getElementsByTagName('head')[0]; h.appendChild(c);
-})();
-</script>
