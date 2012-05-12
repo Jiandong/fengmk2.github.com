@@ -10,6 +10,7 @@
 
 ## Articles
 
+* [Git autocomplete in Mac OS X](http://www.codethatmatters.com/2010/01/git-autocomplete-in-mac-os-x/)
 * [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/): 讲述如何更好地利用分支
 * [Introduction to Pages](http://pages.github.com/)
 * [git - the simple guide](http://rogerdudler.github.com/git-guide/)
@@ -18,3 +19,7 @@
 ## WebSites
 
 * [GitHire, Jobs can go higher](http://www.githire.com/best?skip=10)
+
+## Tools
+
+* [Pandoc: a universal document converter](http://johnmacfarlane.net/pandoc/)

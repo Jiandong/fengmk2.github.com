@@ -1,5 +1,7 @@
 # Javascript
 
+* [Testing getters and setters, and Object.defineProperty](http://robertnyman.com/javascript/javascript-getters-setters.html#regular-getters-and-setters)
+* [Javascript编程风格](http://www.ruanyifeng.com/blog/2012/04/javascript_programming_style.html)
 * [JavaScript date parsing and formatting, Part 1](http://www.xaprb.com/blog/2005/12/12/javascript-closures-for-runtime-efficiency/)
 * [google js style comments](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml#Comments)
 * [jsdoc tags](http://code.google.com/p/jsdoc-toolkit/wiki/TagReference)

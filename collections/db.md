@@ -1,5 +1,7 @@
 # Database
 
+* [SQL to Mongo Mapping Chart](http://www.mongodb.org/display/DOCS/SQL+to+Mongo+Mapping+Chart)
+* [hbase在淘宝的应用和优化小结](http://walkoven.com/?p=57)
 * [Aggregation Framework](http://www.mongodb.org/display/DOCS/Aggregation+Framework)
 * [The Comments Conundrum](http://www.snailinaturtleneck.com/blog/2012/02/02/the-comments-conundrum/)：利用聚合管道解决文章评论难题
 * [HBase 官方文档](http://www.yankay.com/wp-content/hbase/book.html)

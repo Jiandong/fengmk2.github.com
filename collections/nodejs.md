@@ -2,6 +2,8 @@
 
 ## Articles
 
+* [HTTP Server Security Vulnerability: Please upgrade to 0.6.17](http://blog.nodejs.org/2012/05/07/http-server-security-vulnerability-please-upgrade-to-0-6-17/)
+* [Node.js is Candy](http://xentac.net/2011/10/05/1-nodejs-is-candy.html)
 * [使用node-inspector来调试node](http://blog.goddyzhao.me/post/11522397416/how-to-debug-node-with-node-inspector)
 * [Ryan Dahl - History of Node.js](https://www.youtube.com/watch?v=SAc0vQCC6UQ)
 * [Staying up with Node.JS](http://www.devthought.com/2012/01/29/staying-up-with-node-js/)
