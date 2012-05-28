@@ -25,14 +25,6 @@
 * [FaWave](https://chrome.google.com/webstore/detail/aicelmgbddfgmpieedjiggifabdpcnln): FaWave, is a Chrome extension supporting multiple microblogging, which can make all microblogs synchronously updating, work seamlessly across multiple microblogs when you switch between them.
 <br/>![fawave prev](http://ww2.sinaimg.cn/large/6cfc7910jw1dp88kwaao5j.jpg)
 
-## Articles
-
-* [Blog/2012](/blog/2012)
-* [Blog/2011](/blog/2011)
-* [Blog/2010](/blog/2010)
-* [Blog/2009](/blog/2009)
-* [Blog](/blog/)
-
 ## Slides
 
 * [Unit Test in Nodejs](/ppt/unittest-and-bdd-in-nodejs-with-mocha.html)
@@ -61,6 +53,15 @@
 * [CSS](/collections/css.html)
 * [Linux](/collections/linux.html)
 * [Web](/collections/web.html)
+
+## Articles
+
+* [Blog/2012](/blog/2012)
+ * [使用nodejs解决phonegap开发期间的跨域问题](/blog/2012/05/phonegap-dev-env-cross-domain-with-nodejs.html)
+* [Blog/2011](/blog/2011)
+* [Blog/2010](/blog/2010)
+* [Blog/2009](/blog/2009)
+* [Blog](/blog/)
 
 ## Clone MK2's Blog
 

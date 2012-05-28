@@ -2,6 +2,7 @@
 
 ## Articles
 
+* [Setting up Mocha & JSCoverage](http://www.seejohncode.com/2012/03/13/setting-up-mocha-jscoverage/)
 * [HTTP Server Security Vulnerability: Please upgrade to 0.6.17](http://blog.nodejs.org/2012/05/07/http-server-security-vulnerability-please-upgrade-to-0-6-17/)
 * [Node.js is Candy](http://xentac.net/2011/10/05/1-nodejs-is-candy.html)
 * [使用node-inspector来调试node](http://blog.goddyzhao.me/post/11522397416/how-to-debug-node-with-node-inspector)

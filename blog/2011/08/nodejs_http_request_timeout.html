@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>Nodejs HTTP请求的超时处理 Nodejs HTTP Client Request Timeout Handle</title>
+  <title>#title#</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -102,7 +102,7 @@ req = http.get(options, function(res) {
         // 延后copy
         for(var i=0, pos=0, size=chunks.length; i&lt;size; i++) {
             chunks[i].copy(data, pos);
-        pos += chunks[i].length;
+            pos += chunks[i].length;
         }
         console.log('Body:\r\n');
         console.log(data.toString());

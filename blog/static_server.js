@@ -8,8 +8,8 @@ var connect = require('connect')
 var root = path.join(__dirname, '../../');
 connect(
     connect.static(root),
-    function(req, res, next) {
-        if(req.url === '/favicon.ico') {
+    function (req, res, next) {
+        if (req.url === '/favicon.ico') {
             return next();
         }
         var p = path.join(root, req.url);

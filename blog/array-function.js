@@ -2,11 +2,11 @@
 
 
 var arrays = [0];
-var noop = function() {};
+var noop = function () {};
 
 var start = new Date();
-for(var i = 0; i < 100000000; i++) {
-  if(arrays.length === 1) {
+for (var i = 0; i < 100000000; i++) {
+  if (arrays.length === 1) {
     arrays[0] = 1;
   }
 }
@@ -14,15 +14,15 @@ for(var i = 0; i < 100000000; i++) {
 console.log(new Date() - start);
 
 start = new Date();
-for(var i = 0; i < 100000000; i++) {
+for (var i = 0; i < 100000000; i++) {
   noop();
 }
 
 console.log(new Date() - start);
 
 start = new Date();
-for(var i = 0; i < 100000000; i++) {
-  (function() {})();
+for (var i = 0; i < 100000000; i++) {
+  (function () {})();
 }
 
 console.log(new Date() - start);

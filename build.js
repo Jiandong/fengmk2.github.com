@@ -33,7 +33,7 @@ if (fs.statSync(root).isFile()) {
   return;
 }
 
-var walker = ndir.walk(root, function(dir, files) {
+var walker = ndir.walk(root, function (dir, files) {
   if (dir.indexOf('/.git') >= 0) {
     return;
   }
@@ -43,12 +43,13 @@ var walker = ndir.walk(root, function(dir, files) {
       var ext = path.extname(info[0]);
       var name = path.basename(info[0]);
       if (ext === '.md') {
+        var out;
         if (info[0].indexOf('/ppt/') >= 0) {
-          var out = mdit.toSlides(info[0]);
+          out = mdit.toSlides(info[0]);
         } else if (name === 'index.md') {
-          var out = mdit.toHTML(info[0], layout);
+          out = mdit.toHTML(info[0], layout);
         } else {
-          var out = mdit.toHTML(info[0], page_layout);
+          out = mdit.toHTML(info[0], page_layout);
         }
         console.log(out);
       }
@@ -56,13 +57,13 @@ var walker = ndir.walk(root, function(dir, files) {
   }
 });
 
-walker.on('end', function() {
+walker.on('end', function () {
   console.log('start build index...');
-  ndir.walk('./', function(dir, files) {
+  ndir.walk('./', function (dir, files) {
     if (dir.indexOf('/.git') >= 0) {
       return;
     }
-    files.sort(function(a, b) {
+    files.sort(function (a, b) {
       if (a[1].isFile() && !b[1].isFile()) {
         return 1;
       }
