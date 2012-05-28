@@ -12,7 +12,7 @@
 
 ## Projects
 
-* [node-weibo](https://github.com/fengmk2/node-weibo): weibo nodejs sdk
+* [node-weibo](https://github.com/fengmk2/node-weibo) [![Build Status](https://secure.travis-ci.org/fengmk2/node-weibo.png?branch=master)](http://travis-ci.org/fengmk2/node-weibo): weibo nodejs sdk
 * [nodeblog](https://github.com/fengmk2/nodeblog): A blog system base on nodejs. 
 * [ndir](https://github.com/fengmk2/ndir) [![Build Status](https://secure.travis-ci.org/fengmk2/ndir.png)](http://travis-ci.org/fengmk2/ndir): The lost dir util tools. 
 * [mdit](https://github.com/fengmk2/mdit): Markdown it, yes, everything!
