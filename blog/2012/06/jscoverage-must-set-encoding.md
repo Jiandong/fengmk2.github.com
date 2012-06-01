@@ -99,6 +99,14 @@ console.log('foo_cov', foo_cov.getName(), foo_cov.getName() === '你好');
 console.log('foo_cov_utf8', foo_cov_utf8.getName(), foo_cov_utf8.getName() === '你好');
 ```
 
+输出:
+
+```
+foo 你好 true
+foo_cov ä½ å¥½ false
+foo_cov_utf8 你好 true
+```
+
 ## 有爱
 
 推荐阅读: [Setting up Mocha & JSCoverage](http://www.seejohncode.com/2012/03/13/setting-up-mocha-jscoverage/)
