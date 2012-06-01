@@ -57,7 +57,8 @@
 ## Articles
 
 * [Blog/2012](/blog/2012)
- * [使用nodejs解决phonegap开发期间的跨域问题](/blog/2012/05/phonegap-dev-env-cross-domain-with-nodejs.html)
+ * [jscoverage 必须指定encoding参数](./blog/2012/06/jscoverage-must-set-encoding.html)
+ * [使用nodejs解决phonegap开发期间的跨域问题](./blog/2012/05/phonegap-dev-env-cross-domain-with-nodejs.html)
 * [Blog/2011](/blog/2011)
 * [Blog/2010](/blog/2010)
 * [Blog/2009](/blog/2009)
