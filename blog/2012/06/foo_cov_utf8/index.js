@@ -2,12 +2,15 @@
 if (typeof _$jscoverage === 'undefined') _$jscoverage = {};
 if (! _$jscoverage['index.js']) {
   _$jscoverage['index.js'] = [];
-  _$jscoverage['index.js'][2] = 0;
+  _$jscoverage['index.js'][1] = 0;
   _$jscoverage['index.js'][3] = 0;
+  _$jscoverage['index.js'][4] = 0;
 }
-_$jscoverage['index.js'][2]++;
+_$jscoverage['index.js'][1]++;
+var name = "\u82cf\u5343";
+_$jscoverage['index.js'][3]++;
 exports.getName = (function getName() {
-  _$jscoverage['index.js'][3]++;
-  return "\u4f60\u597d";
+  _$jscoverage['index.js'][4]++;
+  return "\u4f60\u597d" + name;
 });
-_$jscoverage['index.js'].source = ["","exports.getName = function getName() {","  return '&#20320;&#22909;';","};"];
+_$jscoverage['index.js'].source = ["var name = '&#33487;&#21315;';","// &#27880;&#37322;","exports.getName = function getName() {","  return '&#20320;&#22909;' + name;","};"];
