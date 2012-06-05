@@ -57,6 +57,7 @@
 ## Articles
 
 * [Blog/2012](/blog/2012)
+ * [给 connect 的 static 模块加上url路径前缀](./blog/2012/06/use-pre-for-connect-static-middleware.html)
  * [jscoverage 必须指定encoding参数](./blog/2012/06/jscoverage-must-set-encoding.html)
  * [使用nodejs解决phonegap开发期间的跨域问题](./blog/2012/05/phonegap-dev-env-cross-domain-with-nodejs.html)
 * [Blog/2011](/blog/2011)
