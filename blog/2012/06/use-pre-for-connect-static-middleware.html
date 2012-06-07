@@ -150,27 +150,27 @@ Shortest transaction:         0.00
 
 <p>晕，为什么加上了 <code>static</code> 模块，性能会降低了<code>50％</code>这么多？<br />查看 <a href="http://www.senchalabs.org/connect/static.html#send">static.send()</a> 源代码:</p>
 
-<pre><code>  // "hidden" file
-  if (!hidden && '.' == basename(path)[0]) return next();
+<pre><code>// "hidden" file
+if (!hidden &amp;&amp; '.' == basename(path)[0]) return next();
 
-  fs.stat(path, function(err, stat){
-    // mime type
-    type = mime.lookup(path);
+fs.stat(path, function(err, stat){
+  // mime type
+  type = mime.lookup(path);
 
-    // ignore ENOENT
-    if (err) {
-      if (fn) return fn(err);
-      return ('ENOENT' == err.code || 'ENAMETOOLONG' == err.code)
-        ? next()
-        : next(err);
-    // redirect directory in case index.html is present
-    } else if (stat.isDirectory()) {
-      if (!redirect) return next();
-      res.statusCode = 301;
-      res.setHeader('Location', url.pathname + '/');
-      res.end('Redirecting to ' + url.pathname + '/');
-      return;
-    }
+  // ignore ENOENT
+  if (err) {
+    if (fn) return fn(err);
+    return ('ENOENT' == err.code || 'ENAMETOOLONG' == err.code)
+      ? next()
+      : next(err);
+  // redirect directory in case index.html is present
+  } else if (stat.isDirectory()) {
+    if (!redirect) return next();
+    res.statusCode = 301;
+    res.setHeader('Location', url.pathname + '/');
+    res.end('Redirecting to ' + url.pathname + '/');
+    return;
+  }
 </code></pre>
 
 <p>static 模块每次都需要一次文件IO，判断文件是否存在，这是多么损耗性能啊。</p>
