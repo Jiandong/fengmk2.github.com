@@ -40,6 +40,7 @@
 
 ## Application
 
+* [Markdown Preview](./browser.html)
 * [NAE-CLI](http://club.cnodejs.org/topic/4f387648301a48d50e003d4c)
 * [CNodejs抽奖程序](/lottery/index.html)
 * [Draw Text with Canvas](/blog/2011/canvas-text.html)
