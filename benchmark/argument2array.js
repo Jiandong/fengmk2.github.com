@@ -4,6 +4,10 @@ function slice() {
   return Array.prototype.slice.call(arguments);
 }
 
+function slice2() {
+  return [].slice.call(arguments);
+}
+
 function forAndArrayPush() {
   var args = [];
   for (var i = 0, l = arguments.length; i < l; i++) {
@@ -26,6 +30,9 @@ suite
 .add('slice(1)', function () {
   slice(1);
 })
+.add('slice2(1)', function () {
+  slice2(1);
+})
 .add('forAndArrayPust(1)', function () {
   forAndArrayPush(1);
 })
@@ -35,6 +42,9 @@ suite
 
 .add('slice(1, 2)', function () {
   slice(1, 2);
+})
+.add('slice2(1, 2)', function () {
+  slice2(1, 2);
 })
 .add('forAndArrayPust(1, 2)', function () {
   forAndArrayPush(1, 2);
@@ -46,6 +56,9 @@ suite
 .add('slice(1, 2, 3)', function () {
   slice(1, 2, 3);
 })
+.add('slice2(1, 2, 3)', function () {
+  slice2(1, 2, 3);
+})
 .add('forAndArrayPust(1, 2, 3)', function () {
   forAndArrayPush(1, 2, 3);
 })
@@ -56,6 +69,9 @@ suite
 .add('slice(1, 2, 3, 4, 5)', function () {
   slice(1, 2, 3, 4, 5);
 })
+.add('slice2(1, 2, 3, 4, 5)', function () {
+  slice2(1, 2, 3, 4, 5);
+})
 .add('forAndArrayPust(1, 2, 3, 4, 5)', function () {
   forAndArrayPush(1, 2, 3, 4, 5);
 })
@@ -65,6 +81,9 @@ suite
 
 .add('slice(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)', function () {
   slice(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+})
+.add('slice2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)', function () {
+  slice2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 })
 .add('forAndArrayPust(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)', function () {
   forAndArrayPush(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
