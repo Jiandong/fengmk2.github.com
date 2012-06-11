@@ -10,6 +10,12 @@
 * Node Club: [@suqian](http://club.cnodejs.org/user/suqian)
 * NodeBlog: [http://nodeblog.org/](http://nodeblog.org/)
 
+## Events
+
+* [Alibaba Developer Conference]: <a href="http://adc.taobao.com/" target="_blank"><img src="http://adc.taobao.com/bundles/devcarnival/images/d2_728x90.jpg" width="728" height="90" alt="ADC·阿里技术嘉年华（7月7-8日·杭州）" /></a>
+
+[Alibaba Developer Conference]: http://adc.taobao.com/
+
 ## Projects
 
 * [node-weibo](https://github.com/fengmk2/node-weibo) [![Build Status](https://secure.travis-ci.org/fengmk2/node-weibo.png?branch=master)](http://travis-ci.org/fengmk2/node-weibo): weibo nodejs sdk
@@ -45,10 +51,10 @@
 * [CNodejs抽奖程序](/lottery/index.html)
 * [Draw Text with Canvas](/blog/2011/canvas-text.html)
 
-## [Collections](/collections)
+## [Collections](./collections)
 
-* [Nodejs](/collections/nodejs.html)
-* [Git](/collections/git.html)
+* [Nodejs](./collections/nodejs.html)
+* [Git](./collections/git.html)
 * [Javascript](/collections/javascript.html)
 * [jQuery](/collections/jquery.html)
 * [CSS](/collections/css.html)
