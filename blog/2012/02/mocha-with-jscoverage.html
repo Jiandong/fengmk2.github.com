@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>mocha + jscoverage</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -40,19 +40,19 @@
 <ol>
 <li><p>使用 <code>jscoverage</code> 命令行程序转换源代码</p>
 
-<pre><code>lib-cov:
+<pre class="prettyprint"><code>lib-cov:
   @rm -rf ./$@
   @jscoverage lib $@
 </code></pre></li>
 <li><p>代码中根据环境变量 <code>JSCOV</code> 判断载入的模块是经过转换的 <code>lib-cov</code> 模块, 如: <a href="https://github.com/fengmk2/ndir/blob/master/index.js">index.js</a></p>
 
-<pre><code>module.exports = process.env.JSCOV 
+<pre class="prettyprint"><code>module.exports = process.env.JSCOV 
   ? require('./lib-cov/ndir')
   : require('./lib/ndir');
 </code></pre></li>
 <li><p>增加 <code>test-cov</code> 命令, 设置reporter 为 <code>html-cov</code></p>
 
-<pre><code>test-cov: lib-cov
+<pre class="prettyprint"><code>test-cov: lib-cov
   @JSCOV=1 $(MAKE) test REPORTER=html-cov &gt; coverage.html &amp;&amp; open coverage.html
 </code></pre></li>
 <li><p>执行 <code>make test-cov</code> 命令享受测试报告吧, 92%的覆盖率, 还不错吧.</p></li>
@@ -66,7 +66,7 @@
 
 <p>本文完整的<code>Makefile</code> 示例来自 <a href="https://github.com/fengmk2/ndir">ndir</a></p>
 
-<pre><code>SRC = $(shell find lib -type f -name "*.js")
+<pre class="prettyprint"><code>SRC = $(shell find lib -type f -name "*.js")
 TESTS = test/*.js
 TESTTIMEOUT = 5000
 REPORTER = spec

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>[nodejs]Buffer vs String</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -37,7 +37,7 @@
 
 <h2>HTTP Request Header Demo</h2>
 
-<pre><code>POST /foo HTTP/1.1\r\n
+<pre class="prettyprint"><code>POST /foo HTTP/1.1\r\n
 Host: foo.example.com\r\n
 Content-Length: 5\r\n
 Connection:keep-alive\r\n
@@ -54,7 +54,7 @@ q=bar
 
 <h2>Buffer版本</h2>
 
-<pre><code>var SPACE = 0x20, // ' '
+<pre class="prettyprint"><code>var SPACE = 0x20, // ' '
     COLON = 0x3a, // 58, :
     NEWLINE = 0x0a, // \n
     ENTER = 0x0d; // \r
@@ -90,7 +90,7 @@ exports.parse = function parse(data) {
 
 <h2>String版本</h2>
 
-<pre><code>exports.parse = function parse(data) {
+<pre class="prettyprint"><code>exports.parse = function parse(data) {
     var lines = data.toString('ascii').split("\n");
     var cut, name, host;
     for (var i = 0, len = lines.length; i &lt; len; i++) {
@@ -110,7 +110,7 @@ exports.parse = function parse(data) {
 
 <h2>测试脚本</h2>
 
-<pre><code>var buffer_parse = require('./string-buffer-benchmark-parse-header-buffer').parse
+<pre class="prettyprint"><code>var buffer_parse = require('./string-buffer-benchmark-parse-header-buffer').parse
   , string_parse = require('./string-buffer-benchmark-parse-header-string').parse;
 
 var data = new Buffer('POST /foo HTTP/1.1\r\nHost: foo.example.com\r\nContent-Length: 5\r\nConnection:keep-alive\r\nAccept:text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nCookie:connect.sid=OY2nKGqI3obs5lYee0JKTjhf.FDtbY1Jz5Ngw5So9Jv3MUetI5ITvrIfwgCkRw%2FcXUCk\r\nUser-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.41 Safari/535.7\r\n\r\nq=bar');
@@ -134,7 +134,7 @@ console.log('string_parse take: ' + (new Date() - start) + ' ms');
 
 <h2>测试结果</h2>
 
-<pre><code>$ node string-buffer-benchmark.js
+<pre class="prettyprint"><code>$ node string-buffer-benchmark.js
 buffer_parse take: 1888 ms
 string_parse take: 4948 ms
 </code></pre>

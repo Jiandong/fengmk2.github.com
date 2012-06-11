@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>Javascript Programming Style</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -45,7 +45,7 @@
 
 <p>Wrong:</p>
 
-<pre><code>block
+<pre class="prettyprint "><code>block
 {
   ...
 }
@@ -53,7 +53,7 @@
 
 <p>Right:</p>
 
-<pre><code>block {
+<pre class="prettyprint "><code>block {
   ...
 }
 </code></pre>
@@ -64,12 +64,12 @@
 
 <p>Wrong:</p>
 
-<pre><code>foo (bar);
+<pre class="prettyprint "><code>foo (bar);
 </code></pre>
 
 <p>Right:</p>
 
-<pre><code>foo(bar);
+<pre class="prettyprint "><code>foo(bar);
 </code></pre>
 
 <h3>规则3</h3>
@@ -78,12 +78,12 @@
 
 <p>Wrong:</p>
 
-<pre><code>function foo (b) { ... }
+<pre class="prettyprint "><code>function foo (b) { ... }
 </code></pre>
 
 <p>Right:</p>
 
-<pre><code>function foo(b) { ... }
+<pre class="prettyprint "><code>function foo(b) { ... }
 </code></pre>
 
 <h3>规则4</h3>
@@ -92,7 +92,7 @@
 
 <p>Wrong:</p>
 
-<pre><code>return(a+b);
+<pre class="prettyprint "><code>return(a+b);
 
 if(a === 0) { ... }
 
@@ -101,7 +101,7 @@ function(x) { ... }
 
 <p>Right:</p>
 
-<pre><code>return (a+b);
+<pre class="prettyprint "><code>return (a+b);
 
 if (a === 0) { ... }
 
@@ -114,12 +114,12 @@ function (x) {...}
 
 <p>Wrong:</p>
 
-<pre><code>var a = 1
+<pre class="prettyprint "><code>var a = 1
 </code></pre>
 
 <p>Right:</p>
 
-<pre><code>var a = 1;
+<pre class="prettyprint "><code>var a = 1;
 </code></pre>
 
 <h3>规则6</h3>
@@ -132,12 +132,12 @@ function (x) {...}
 
 <p>Wrong:</p>
 
-<pre><code>if (a == 0) { ... }
+<pre class="prettyprint "><code>if (a == 0) { ... }
 </code></pre>
 
 <p>Right:</p>
 
-<pre><code>if (a === 0) { ... }
+<pre class="prettyprint "><code>if (a === 0) { ... }
 </code></pre>
 
 <h3>规则8</h3>
@@ -146,14 +146,14 @@ function (x) {...}
 
 <p>Wrong:</p>
 
-<pre><code>if (a = b) { ... }
+<pre class="prettyprint "><code>if (a = b) { ... }
 
 var a = b = 0;
 </code></pre>
 
 <p>Right:</p>
 
-<pre><code>a = b;
+<pre class="prettyprint "><code>a = b;
 if (a) { ... }
 
 var a = 0, b = 0;
@@ -165,14 +165,14 @@ var a = 0, b = 0;
 
 <p>Wrong:</p>
 
-<pre><code>if (!o) {
+<pre class="prettyprint "><code>if (!o) {
   var o = {};
 }
 </code></pre>
 
 <p>Right:</p>
 
-<pre><code>var o;
+<pre class="prettyprint "><code>var o;
 ...
 
 if (!o) {
@@ -182,12 +182,12 @@ if (!o) {
 
 <p>Wrong:</p>
 
-<pre><code>for (var i ...) { ... }
+<pre class="prettyprint "><code>for (var i ...) { ... }
 </code></pre>
 
 <p>Right:</p>
 
-<pre><code>var i;
+<pre class="prettyprint "><code>var i;
 for (i ...) { ... }
 </code></pre>
 
@@ -197,7 +197,7 @@ for (i ...) { ... }
 
 <p>Wrong:</p>
 
-<pre><code>function foo(bar) {
+<pre class="prettyprint "><code>function foo(bar) {
   if (bar) {
     var a = 100;
     ...
@@ -208,7 +208,7 @@ for (i ...) { ... }
 
 <p>Right:</p>
 
-<pre><code>function foo(bar) {
+<pre class="prettyprint "><code>function foo(bar) {
   var a;
   if (bar) {
     a = 100;
@@ -240,12 +240,12 @@ for (i ...) { ... }
 
 <p>Wrong:</p>
 
-<pre><code>if (a) foo();
+<pre class="prettyprint "><code>if (a) foo();
 </code></pre>
 
 <p>Right:</p>
 
-<pre><code>if (a) { foo(); }
+<pre class="prettyprint "><code>if (a) { foo(); }
 </code></pre>
 
 <h2>参考</h2>

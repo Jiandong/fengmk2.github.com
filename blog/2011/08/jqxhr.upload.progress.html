@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title></title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -35,7 +35,7 @@
 
 <p>在Firefox, Google Chrome and Safari中，如果通过XMLHttpRequest上传文件，<br />是可以通过监听XMLHttpRequest.upload对象的progress事件来查看进度的。</p>
 
-<pre><code>var xhr = new XMLHttpRequest();
+<pre class="prettyprint"><code>var xhr = new XMLHttpRequest();
 xhr.upload.addEventListener("progress", function (evt) {
     // display uploading progress infomation...
 });
@@ -53,7 +53,7 @@ xhr.upload.addEventListener("progress", function (evt) {
 
 <p>根据<a href="http://api.jquery.com/jQuery.ajax/">jQuery.ajax</a>文档，xhr是可以自己提供的：</p>
 
-<pre><code>xhr: Function
+<pre class="prettyprint"><code>xhr: Function
     Default: ActiveXObject when available (IE), 
     the XMLHttpRequest otherwise Callback for creating 
     the XMLHttpRequest object. 
@@ -65,7 +65,7 @@ xhr.upload.addEventListener("progress", function (evt) {
 
 <p>于是，我们就可以自己提供xhr，然后设置progress事件：</p>
 
-<pre><code>function onprogress(evt) {
+<pre class="prettyprint"><code>function onprogress(evt) {
     // display uploading progress infomation...
 };
 var xhr_provider = function() {

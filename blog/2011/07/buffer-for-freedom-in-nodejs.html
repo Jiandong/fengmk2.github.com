@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>关于Nodejs中Buffer释放的二三事</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -35,7 +35,7 @@
 
 <p>为了看看这个问题，我写了一段测试代码</p>
 
-<pre><code>var http = require('http')
+<pre class="prettyprint"><code>var http = require('http')
   , os = require('os');
 
 function create(size, res) {
@@ -61,7 +61,7 @@ http.createServer(function(req, res) {
 
 <p>从<a href="http://localhost:8080/"><a href='http://localhost:8080/'>http://localhost:8080/</a></a>可以看到，一次http请求调用后</p>
 
-<pre><code>------------- new Buffer 0
+<pre class="prettyprint"><code>------------- new Buffer 0
 free 139.82421875MB
 ------------- after new 1MB buffer
 free 138.890625MB

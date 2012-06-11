@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>Nodejs HTTP请求的超时处理 Nodejs HTTP Client Request Timeout Handle</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -39,7 +39,7 @@
 
 <p>利用<a href="http://nodejs.org/docs/v0.4.11/api/net.html#socket.setTimeout">socket.setTimeout</a>，<br />我们可以为<a href="http://nodejs.org/docs/v0.4.11/api/http.html#http.ClientRequest">http.ClientRequest</a>增加超时设置方法</p>
 
-<pre><code>var http = require('http');
+<pre class="prettyprint"><code>var http = require('http');
 http.ClientRequest.prototype.setTimeout = function(timeout, callback) {
     var self = this;
     if(callback) {
@@ -67,7 +67,7 @@ http.ClientRequest.prototype.setTimeout = function(timeout, callback) {
 
 <h2>示例代码：Timeout Demo</h2>
 
-<pre><code>var http = require('http');
+<pre class="prettyprint"><code>var http = require('http');
 
 var request_timer = null, req = null;
 // 请求5秒超时

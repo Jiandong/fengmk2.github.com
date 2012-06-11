@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>nodejs: 修复express的res.download 下载被取消导致的 “Can't remove headers after they are sent” 异常</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -37,7 +37,7 @@
 
 <p>express 中如果我们使用res.download处理文件下载，中途被取消下载，就会出现以下异常</p>
 
-<pre><code>node.js:116
+<pre class="prettyprint"><code>node.js:116
     throw e; // process.nextTick error, or 'error' event on first tick
         ^
         Error: Can't remove headers after they are sent.
@@ -50,7 +50,7 @@
 
 <p>查看了一下express的源代码，发现出现err的时候，会移除“Content-Disposition“ http header，这样必要会异常，因为响应已经发给客户端了，我们只需要将”if (err) self.removeHeader('Content-Disposition');“ 这段源代码注释掉就可以了。<br />如果不想修改express的源代码，我们可以在require('express')后，对express 进行一个简单修复：</p>
 
-<pre><code>var express = require('express');
+<pre class="prettyprint"><code>var express = require('express');
 //fixed express download cancel bug:
 require('http').ServerResponse.prototype.download = function(path, filename, fn){
     var self = this;

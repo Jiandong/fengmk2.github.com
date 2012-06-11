@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>web旺旺技术变迁的一些笔记痕迹</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -45,7 +45,7 @@
 
 <h2>Linux的TCP调优参数及说明</h2>
 
-<pre><code>//向外连接可用端口范围
+<pre class="prettyprint"><code>//向外连接可用端口范围
 echo “1024 65535” &gt; /proc/sys/net/ipv4/ip_local_port_range
 //time_wait连接重用
 echo 1 &gt; /proc/sys/net/ipv4/tcp_tw_reuse 

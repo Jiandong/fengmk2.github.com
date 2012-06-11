@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>[nodejs]Javascript模板引擎性能对比及几点优化</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -37,7 +37,7 @@
 
 <p>测试代码在：<a href='https://github.com/fengmk2/mk2blog/tree/master/2011/4/js-template-benchmarks'>https://github.com/fengmk2/mk2blog/tree/master/2011/4/js-template-benchmarks</a></p>
 
-<pre><code>$ node benchmarks.js
+<pre class="prettyprint"><code>$ node benchmarks.js
 </code></pre>
 
 <h2>我的测试环境</h2>
@@ -52,7 +52,7 @@
 
 <p>渲染10万次，最快的是doU, doT, nTenjin(基于tenjin的优化版本), jst_speed；最慢的是tenjin和jade<br />doT已经达到百万次级别了，好神速啊！<br />!!!新增<a href="https://github.com/shaunlee">@shaunlee</a> 的中国第一速度模板引擎: <a href="https://github.com/shaunlee/node-jst">jst</a>, <br /><a href="https://github.com/shaunlee">@shaunlee</a>看见第一次测试结果后非常不满意，经过优化后，速度已经达到第一梯队了！</p>
 
-<pre><code>No escape, render 100000 times:
+<pre class="prettyprint"><code>No escape, render 100000 times:
 
 doT running...
 use: 0.066 sec, rps: 1515151.5151515151
@@ -87,7 +87,7 @@ use: 0.065 sec, rps: 1538461.5384615385
 
 <p>性能马上变成浮云了。<br />速度高低排名: jst(果然是第一速度), nTenjin, jqtpl, ejs, doT, doU, haml, jade<br />对比场景1，可看到doT和doU的escape性能非常差。</p>
 
-<pre><code>All escape, render 100000 times:
+<pre class="prettyprint"><code>All escape, render 100000 times:
 
 doT running...
 use: 3.921 sec, rps: 25503.698036215254

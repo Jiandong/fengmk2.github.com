@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>Google Appengine 的自动部署脚本</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -37,7 +37,7 @@
 
 <h2>deploy.py</h2>
 
-<pre><code>#!/usr/bin/env python
+<pre class="prettyprint"><code>#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 # 将 {project_name} 替换成你的项目目录
@@ -70,7 +70,7 @@ if __name__ == '__main__':
 
 <h2>app.yaml</h2>
 
-<pre><code>application: demo{{no}}
+<pre class="prettyprint"><code>application: demo{{no}}
 version: 1
 runtime: python
 api_version: 1
@@ -82,7 +82,7 @@ handlers:
 
 <h2>运行</h2>
 
-<pre><code># 慢慢等吧，^_^
+<pre class="prettyprint"><code># 慢慢等吧，^_^
 python deploy.py 0, 10000
 </code></pre>
 

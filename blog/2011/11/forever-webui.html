@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>[nodejs]保证你的程序死了还能复活：forever and forever webui</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -37,12 +37,12 @@
 
 <p>安装forever: <a href='https://github.com/nodejitsu/forever'>https://github.com/nodejitsu/forever</a></p>
 
-<pre><code>$ [sudo] npm install forever -g
+<pre class="prettyprint"><code>$ [sudo] npm install forever -g
 </code></pre>
 
 <p>Demo: 进程重启超过5次后将不再运行</p>
 
-<pre><code>$ forever examples/error-on-timer.js -m 5
+<pre class="prettyprint"><code>$ forever examples/error-on-timer.js -m 5
 </code></pre>
 
 <h2><a href="https://github.com/FGRibreau/forever-webui">forever-webui</a></h2>
@@ -51,7 +51,7 @@
 
 <p>安装并运行</p>
 
-<pre><code>$ npm install forever-webui &amp;&amp; node node_modules/forever-webui/app.js
+<pre class="prettyprint"><code>$ npm install forever-webui &amp;&amp; node node_modules/forever-webui/app.js
 </code></pre>
 
 <p>浏览器访问 <a href='http://127.0.0.1:8085'>http://127.0.0.1:8085</a> </p>

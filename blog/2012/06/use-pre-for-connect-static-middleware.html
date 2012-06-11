@@ -33,7 +33,7 @@
 
 <p>估计我们使用 <a href="http://www.senchalabs.org/connect/">connect</a> 都好很自然地按照官方的例子使用静态文件模块 <a href="http://www.senchalabs.org/connect/static.html">static</a>:</p>
 
-<pre><code>var connect = require('connect');
+<pre class="prettyprint"><code>var connect = require('connect');
 
 connect(
   connect.static(__dirname),
@@ -54,7 +54,7 @@ console.log('Server running at <a href='http://127.0.0.1:8124/'>http://127.0.0.1
 
 <p>我们使用 nodejs 官方文档给出的 <a href="http://nodejs.org/docs/latest/api/synopsis.html">helloworld</a> 做最基础的参照：</p>
 
-<pre><code>var http = require('http');
+<pre class="prettyprint"><code>var http = require('http');
 
 http.createServer(function (request, response) {
   response.writeHead(200, {'Content-Type': 'text/plain'});
@@ -68,7 +68,7 @@ console.log('Server running at <a href='http://127.0.0.1:8124/'>http://127.0.0.1
 
 <p>不使用任何中间件模块</p>
 
-<pre><code>var connect = require('connect');
+<pre class="prettyprint"><code>var connect = require('connect');
 
 connect(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -82,7 +82,7 @@ console.log('Server running at <a href='http://127.0.0.1:8124/'>http://127.0.0.1
 
 <p>官方最纯洁的 helloworld: <code>7851.56 qps</code></p>
 
-<pre><code>$ siege -b -c10 -t10S <a href='http://127.0.0.1:8124/'>http://127.0.0.1:8124/</a>
+<pre class="prettyprint"><code>$ siege -b -c10 -t10S <a href='http://127.0.0.1:8124/'>http://127.0.0.1:8124/</a>
 ** SIEGE 2.72
 ** Preparing 10 concurrent users for battle.
 The server is now under siege...
@@ -104,7 +104,7 @@ Shortest transaction:         0.00
 
 <p>最纯洁的 connect helloworld: <code>6808.19 qps</code></p>
 
-<pre><code>$ siege -b -c10 -t10S <a href='http://127.0.0.1:8124/'>http://127.0.0.1:8124/</a>
+<pre class="prettyprint"><code>$ siege -b -c10 -t10S <a href='http://127.0.0.1:8124/'>http://127.0.0.1:8124/</a>
 ** SIEGE 2.72
 ** Preparing 10 concurrent users for battle.
 The server is now under siege...
@@ -126,7 +126,7 @@ Shortest transaction:         0.00
 
 <p>带 static 的 connect helloworld: <code>3636.98 qps</code></p>
 
-<pre><code>$ siege -b -c10 -t10S <a href='http://127.0.0.1:8124/'>http://127.0.0.1:8124/</a>
+<pre class="prettyprint"><code>$ siege -b -c10 -t10S <a href='http://127.0.0.1:8124/'>http://127.0.0.1:8124/</a>
 ** SIEGE 2.72
 ** Preparing 10 concurrent users for battle.
 The server is now under siege...
@@ -150,7 +150,7 @@ Shortest transaction:         0.00
 
 <p>晕，为什么加上了 <code>static</code> 模块，性能会降低了<code>50％</code>这么多？<br />查看 <a href="http://www.senchalabs.org/connect/static.html#send">static.send()</a> 源代码:</p>
 
-<pre><code>// "hidden" file
+<pre class="prettyprint"><code>// "hidden" file
 if (!hidden &amp;&amp; '.' == basename(path)[0]) return next();
 
 fs.stat(path, function(err, stat){
@@ -181,7 +181,7 @@ fs.stat(path, function(err, stat){
 
 <p>那么我们改进后的代码应该是这样的:</p>
 
-<pre><code>var connect = require('connect');
+<pre class="prettyprint"><code>var connect = require('connect');
 
 var app = connect();
 app.use('/public', connect.static(__dirname));
@@ -196,7 +196,7 @@ console.log('Server running at <a href='http://127.0.0.1:8124/'>http://127.0.0.1
 
 <p>性能如何？ wow <code>6749.03 qps</code>, 几乎和 connect hellowrold 一致。done!</p>
 
-<pre><code>$ siege -b -c10 -t10S <a href='http://127.0.0.1:8124/'>http://127.0.0.1:8124/</a>
+<pre class="prettyprint"><code>$ siege -b -c10 -t10S <a href='http://127.0.0.1:8124/'>http://127.0.0.1:8124/</a>
 ** SIEGE 2.72
 ** Preparing 10 concurrent users for battle.
 The server is now under siege...
@@ -218,7 +218,7 @@ Shortest transaction:         0.00
 
 <p>重现一下之前的性能问题，访问 <code>/public/foo</code> 即可重现。</p>
 
-<pre><code>$ siege -b -c10 -t10S <a href='http://127.0.0.1:8124/public/foo'>http://127.0.0.1:8124/public/foo</a>
+<pre class="prettyprint"><code>$ siege -b -c10 -t10S <a href='http://127.0.0.1:8124/public/foo'>http://127.0.0.1:8124/public/foo</a>
 ** SIEGE 2.72
 ** Preparing 10 concurrent users for battle.
 The server is now under siege...

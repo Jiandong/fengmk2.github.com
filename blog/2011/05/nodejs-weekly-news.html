@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>nodejs一周动态(2011-05-05 - 05-15)</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -35,7 +35,7 @@
 
 <p>文章中说到与Nodejs的对比: <a href="http://www.theregister.co.uk/2011/05/05/google_go/page4.html">The New Node?</a></p>
 
-<pre><code>Node.js shows great numbers for heavy numbers of clients, and they've done a really good job. 
+<pre class="prettyprint"><code>Node.js shows great numbers for heavy numbers of clients, and they've done a really good job. 
 But if those clients are CPU-intensive, they've got no place to go. 
 You can't get the parallelism you need. 
 With Go, you get the best of both worlds: 
@@ -45,13 +45,13 @@ you can imagine scaling to a much larger number of requests.
 
 <p>同步形式的异步代码:</p>
 
-<pre><code>That lets you write asynchronous code in a synchronous style. 
+<pre class="prettyprint"><code>That lets you write asynchronous code in a synchronous style. 
 As people, we're much better suited to writing about things in a synchronous style.
 </code></pre>
 
 <p>Node作者 Ryan Dahl 回答:</p>
 
-<pre><code>JavaScript is a familiar language to a whole generation of developers,
+<pre class="prettyprint"><code>JavaScript is a familiar language to a whole generation of developers,
 The ability to apply an existing programming language 
     to the domain of writing servers goes a long way towards being 'easy'.
 The Node runtime doesn't provide parallel execution, 
@@ -67,7 +67,7 @@ if you like, you can take advantage of the parallelism in the operating system,
 
 <p>Ryan Dahl’s NodeConf slides includes some background on liboio with a focus on Windows support.</p>
 
-<pre><code>Today Node runs on Windows via Cygwin. This is an unacceptable port. 
+<pre class="prettyprint"><code>Today Node runs on Windows via Cygwin. This is an unacceptable port. 
 Cygwin is slow, old, buggy. Users hate it
 </code></pre>
 
@@ -77,12 +77,12 @@ Cygwin is slow, old, buggy. Users hate it
 
 <p>nTunes (MIT License) by Nathan Rajlich is a REST API for controlling iTunes. <br />There’s an npm package, but you might want to install this globally: </p>
 
-<pre><code>npm install -g nTunes. 
+<pre class="prettyprint"><code>npm install -g nTunes. 
 </code></pre>
 
 <p>Once it’s installed and you’ve run nTunes, it can be used like this:</p>
 
-<pre><code>~$ nTunes
+<pre class="prettyprint"><code>~$ nTunes
           ______                                     
          /\__  _\                                    
   ___    \/_/\ \/   __  __    ___       __     ____  

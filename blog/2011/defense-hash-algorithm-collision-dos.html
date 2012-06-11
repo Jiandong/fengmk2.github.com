@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>Defense hash algorithm collision 防御hash算法冲突导致拒绝服务器</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -74,7 +74,7 @@
 
 <p>好吧，直接上 <a href="https://github.com/senchalabs/connect/blob/master/lib/middleware/limit.js#L8">connect.limit</a> 模块解决</p>
 
-<pre><code>connect()
+<pre class="prettyprint "><code>connect()
   .use(connect.limit('1mb'))
   .use(handleRequest)
 </code></pre>
@@ -85,21 +85,21 @@
 
 <p>PS: 提了pull request，但是估计在没有真实攻击示例放出来之前，是不会被接受的。</p>
 
-<pre><code>/**
+<pre class="prettyprint "><code>/**
  * Parse the given str.
  */
 
 function parseString(str, options) {
-  var limit = options && options.limit;
-  var keys = options && options.keys;
-  if (keys && Array.isArray(keys)) {
+  var limit = options &amp;&amp; options.limit;
+  var keys = options &amp;&amp; options.keys;
+  if (keys &amp;&amp; Array.isArray(keys)) {
     keys = {};
-    for (var i = 0, l = options.keys.length; i < l; i++) {
+    for (var i = 0, l = options.keys.length; i &lt; l; i++) {
       keys[options.keys[i]] = 1;
     }
   }
   return String(str)
-    .split('&', limit)
+    .split('&amp;', limit)
     .reduce(function(ret, pair){
       try{
         pair = decodeURIComponent(pair.replace(/\+/g, ' '));
@@ -110,7 +110,7 @@ function parseString(str, options) {
       var eql = pair.indexOf('=')
         , brace = lastBraceInKey(pair)
         , key = pair.substr(0, brace || eql);
-      if (keys && !keys[key]) {
+      if (keys &amp;&amp; !keys[key]) {
         return ret;
       }
       var val = pair.substr(brace || eql, pair.length)
@@ -148,7 +148,7 @@ exports.parse = function(str, options) {
 
 <p>还需要让 <a href="https://github.com/fengmk2/connect/blob/master/lib/middleware/query.js#L38">connect.query</a> 模块 传递options参数给 <code>qs.parse()</code></p>
 
-<pre><code>module.exports = function query(options){
+<pre class="prettyprint "><code>module.exports = function query(options){
   return function query(req, res, next){
     req.query = ~req.url.indexOf('?')
       ? qs.parse(parse(req.url).query, options)
@@ -160,7 +160,7 @@ exports.parse = function(str, options) {
 
 <p>同样 <a href="https://github.com/fengmk2/connect/blob/master/lib/middleware/urlencoded.js#L47">connect.urlencoded</a> 模块也需要将options参数传递给 <code>qs.parse()</code></p>
 
-<pre><code>    req.on('end', function(){
+<pre class="prettyprint "><code>    req.on('end', function(){
       try {
         req.body = buf.length
           ? qs.parse(buf, options)
@@ -174,7 +174,7 @@ exports.parse = function(str, options) {
 
 <h3>全部组合起来</h3>
 
-<pre><code>var qsOptions = { limit: 100 };
+<pre class="prettyprint "><code>var qsOptions = { limit: 100 };
 connect()
   .use(connect.limit('1mb'))
   .use(connect.query(qsOptions))
@@ -186,7 +186,7 @@ connect()
 
 <p>请求的 <code>http header</code> 也会导致hash冲突，在<code>V8</code>层面未修复hash算法之前，可以通过简单的 <code>http_patch.js</code> 修复此问题:</p>
 
-<pre><code>var http = require('http');
+<pre class="prettyprint "><code>var http = require('http');
 
 var IncomingMessage = http.IncomingMessage;
 var _addHeaderLine = IncomingMessage.prototype._addHeaderLine;
@@ -195,7 +195,7 @@ var _addHeaderLine = IncomingMessage.prototype._addHeaderLine;
 IncomingMessage.prototype._addHeaderLine = function(field, val) {
   if (!this.__headerCount__) {
     this.__headerCount__ = 0;
-  } else if (this.__headerCount__ >= 100) {
+  } else if (this.__headerCount__ &gt;= 100) {
     return;
   }
   _addHeaderLine.apply(this, arguments);

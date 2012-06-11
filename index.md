@@ -33,6 +33,7 @@
 
 ## Slides
 
+* [我的 nodejs 编程规范](./ppt/nodejs_programming_style.html)
 * [Unit Test in Nodejs](/ppt/unittest-and-bdd-in-nodejs-with-mocha.html)
 * [Nodejs, 脱离了浏览器的Javascript](/ppt/qcon2011/index.html)
 * [Nodejs实践二三事](/ppt/those-things-using-nodejs/index.html)

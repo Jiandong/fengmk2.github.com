@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>nodejs 1G堆栈内存限制(by v8)</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -39,7 +39,7 @@
 
 <p>测试代码：每次填充100MB内存，值得机器卡住为止。<br />(我的机器是2G内存，为了能将此文章写下去，我限制到1.5G退出程序)</p>
 
-<pre><code>var os = require('os');
+<pre class="prettyprint"><code>var os = require('os');
 
 function show_mem() {
   var total = os.totalmem()
@@ -72,7 +72,7 @@ show_mem();
 
 <p>运行结果: 进程占用rss 1581735936 字节，跟预想中的一致。证明nodejs进程可以使用超过1G的内存。</p>
 
-<pre><code>System: total 2100867072 free 52113408 used 2048753664
+<pre class="prettyprint"><code>System: total 2100867072 free 52113408 used 2048753664
 Process: heapTotal 6277280 heapUsed 1725092 rss 1581735936 vsize 1628082176
 ----------------------------------------------------------------
 </code></pre>

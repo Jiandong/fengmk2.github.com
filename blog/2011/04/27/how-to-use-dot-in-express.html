@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>如何在express使用doT模板引擎</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -37,14 +37,14 @@
 
 <h2>安装dot</h2>
 
-<pre><code>$ sudo npm install dot
+<pre class="prettyprint"><code>$ sudo npm install dot
 </code></pre>
 
 <h2>让express使用dot</h2>
 
 <p>安装express的模板引擎约定，引擎必须有一个compile方法，接受str和options参数，返回一个function对象即可，接口大致如下：</p>
 
-<pre><code>exports.compile = function(str, options) {
+<pre class="prettyprint"><code>exports.compile = function(str, options) {
     // compile template str
     // return function
 }
@@ -52,7 +52,7 @@
 
 <p>显然，只需要实现compile接口即可</p>
 
-<pre><code>// dot.express.js
+<pre class="prettyprint"><code>// dot.express.js
 var dot = require('dot');
 
 exports.compile = function(str, options) {
@@ -62,7 +62,7 @@ exports.compile = function(str, options) {
 
 <p>在express使用dot.express.js</p>
 
-<pre><code>var dot_express = require('dot.express');
+<pre class="prettyprint"><code>var dot_express = require('dot.express');
 
 app.set("view engine", "html");
 app.register(".html", dot_express);
@@ -75,7 +75,7 @@ app.get('/', function(req, res, next) {
 
 <h2>更简约的方式</h2>
 
-<pre><code>var dot = require('dot');
+<pre class="prettyprint"><code>var dot = require('dot');
 
 app.set("view engine", "html");
 app.register(".html", {
@@ -89,13 +89,13 @@ app.register(".html", {
 
 <p>dot默认的定界符是 {{ 和 }}，这样模板文件会如下</p>
 
-<pre><code>// index.html
+<pre class="prettyprint"><code>// index.html
 &lt;p&gt;hello {{! word }}&lt;/p&gt;
 </code></pre>
 
 <p>这样，肯定不能通过HTML智能提示校验<br />参考<a href="http://www.kuwata-lab.com/tenjin/">tenjin</a>的做法，将定界符修改为能通过智能提示校验的即可</p>
 
-<pre><code>// index.js
+<pre class="prettyprint"><code>// index.js
 dot.templateSettings.begin = '&lt;?js';
 dot.templateSettings.end = '?&gt;';
 
@@ -109,7 +109,7 @@ dot.templateSettings.end = '?&gt;';
 
 <p>线上环境必须开启'view cache'，因为express的view会使用fs.statSync检测模板是否存在，如果不开启缓存，则每次都会同步检测和加载模板，整个web的性能就完蛋了。</p>
 
-<pre><code>app.set('view cache', true);
+<pre class="prettyprint"><code>app.set('view cache', true);
 </code></pre>
 
 <h2>有爱</h2>

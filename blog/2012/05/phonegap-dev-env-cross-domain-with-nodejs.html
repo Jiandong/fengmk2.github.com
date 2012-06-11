@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>使用nodejs解决phonegap开发期间的跨域问题</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -43,8 +43,7 @@
 
 <p>将所有请求，通过本地node进程进行转发。<br />静态文件资源也有此proxy服务处理，也就解决了跨域问题。</p>
 
-<pre><code>javascript
-var http = require('http');
+<pre class="prettyprint lang-javascript"><code>var http = require('http');
 var path = require('path');
 var urlparse = require('url').parse;
 var connect = require('connect');
@@ -106,8 +105,7 @@ console.log("Server is launching at <a href='http://localhost:8001'>http://local
 
 <p>通过判断 <code>navigator.notification</code> 是否存在，确定当前执行环境是浏览器还是模拟器。</p>
 
-<pre><code>javascript
-if (!navigator.notification) {
+<pre class="prettyprint lang-javascript"><code>if (!navigator.notification) {
   V5.Model.proxy = location.origin + '/proxy';
 }
 </code></pre>

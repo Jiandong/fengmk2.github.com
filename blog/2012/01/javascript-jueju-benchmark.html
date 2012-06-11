@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/prettify.css">
   <script src="/js/jquery-1.7.min.js"></script>
   <script src="/js/prettify.js"></script>
-  <title>#title#</title>
+  <title>Javascript绝句性能</title>
   <style>
      body {
       font-family: Helvetica, Arial, FreeSans, san-serif;
@@ -43,14 +43,14 @@
 
 <p>绝句实现： <code>|0 ^0 &gt;&gt;0 ~~</code></p>
 
-<pre><code>'10.567890'|0
+<pre class="prettyprint "><code>'10.567890'|0
 '10.567890'^0
 ~~'10.567890'
 </code></pre>
 
 <p>结果: 10</p>
 
-<pre><code>-2.23456789|0
+<pre class="prettyprint "><code>-2.23456789|0
 -2.23456789^0
 ~~-2.23456789
 </code></pre>
@@ -59,59 +59,59 @@
 
 <p>大于等于 <code>0x80000000</code> 会出现bug</p>
 
-<pre><code>-2147483648|0 
+<pre class="prettyprint "><code>-2147483648|0 
 </code></pre>
 
 <p>普通实现：</p>
 
-<pre><code>function integer(n) {
-  return n >=0 ? Math.floor(n) : Math.ceil(n);
+<pre class="prettyprint "><code>function integer(n) {
+  return n &gt;=0 ? Math.floor(n) : Math.ceil(n);
 }
 </code></pre>
 
-<pre><code>var count = 5000000;
+<pre class="prettyprint "><code>var count = 5000000;
 var start = new Date();
 var s = 0;
-for (var i = 0; i < count; i++) {
+for (var i = 0; i &lt; count; i++) {
   s = '10.567890'|0;
 }
-console.log('|0 => %d', new Date() - start);
+console.log('|0 =&gt; %d', new Date() - start);
 
 var start = new Date();
 var s = 0;
-for (var i = 0; i < count; i++) {
+for (var i = 0; i &lt; count; i++) {
   s = '10.567890'^0;
 }
-console.log('^0 => %d', new Date() - start);
+console.log('^0 =&gt; %d', new Date() - start);
 
 var start = new Date();
 var s = 0;
-for (var i = 0; i < count; i++) {
-  s = '10.567890'>>0;
+for (var i = 0; i &lt; count; i++) {
+  s = '10.567890'&gt;&gt;0;
 }
-console.log('>>0 => %d', new Date() - start);
+console.log('&gt;&gt;0 =&gt; %d', new Date() - start);
 
 var start = new Date();
 var s = 0;
-for (var i = 0; i < count; i++) {
+for (var i = 0; i &lt; count; i++) {
   s = ~~'10.567890';
 }
-console.log('~~ => %d', new Date() - start);
+console.log('~~ =&gt; %d', new Date() - start);
 
 var start = new Date();
 var s = 0;
-for (var i = 0; i < count; i++) {
+for (var i = 0; i &lt; count; i++) {
   s = integer('10.567890');
 }
-console.log('integer => %d', new Date() - start);
+console.log('integer =&gt; %d', new Date() - start);
 
 var start = new Date();
 var s = 0;
 var n = '10.567890';
-for (var i = 0; i < count; i++) {
-  s = n >=0 ? Math.floor(n) : Math.ceil(n);
+for (var i = 0; i &lt; count; i++) {
+  s = n &gt;=0 ? Math.floor(n) : Math.ceil(n);
 }
-console.log('inline => %d', new Date() - start);
+console.log('inline =&gt; %d', new Date() - start);
 console.log('');
 
 </code></pre>
