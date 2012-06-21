@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="description" content="MK2's blog，生命是一场幻觉，代码是一段人生。"/>
-  <link rel="stylesheet" href="/css/typo.css" />
-  <link rel="stylesheet" href="/css/prettify.css">
-  <script src="/js/jquery-1.7.min.js"></script>
-  <script src="/js/prettify.js"></script>
+  <link rel="stylesheet" href="http://fengmk2.github.com/css/typo.css" />
+  <link rel="stylesheet" href="http://fengmk2.github.com/css/prettify.css" />
+  <script src="http://fengmk2.github.com/js/jquery-1.7.min.js"></script>
+  <script src="http://fengmk2.github.com/js/prettify.js"></script>
   <title>nodejs: 修复express的res.download 下载被取消导致的 “Can't remove headers after they are sent” 异常</title>
   <style>
      body {
-      font-family: Helvetica, Arial, FreeSans, san-serif;
+      font-family: Monaco, Helvetica, Arial, FreeSans, san-serif;
      }
      a{color:#09f;}
      code{color:#080;}
@@ -105,8 +105,6 @@ require('http').ServerResponse.prototype.download = function(path, filename, fn)
 <!-- Specific to this page -->
 <script>
 $(function() {
-  // Deck initialization
-  $('pre code').parent().addClass('prettyprint');
   prettyPrint();
 });
 </script>

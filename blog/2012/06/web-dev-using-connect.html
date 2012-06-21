@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="http://fengmk2.github.com/css/prettify.css" />
   <script src="http://fengmk2.github.com/js/jquery-1.7.min.js"></script>
   <script src="http://fengmk2.github.com/js/prettify.js"></script>
-  <title>web旺旺技术变迁的一些笔记痕迹</title>
+  <title>使用 connect 进行web开发</title>
   <style>
      body {
       font-family: Monaco, Helvetica, Arial, FreeSans, san-serif;
@@ -29,59 +29,13 @@
 </div> <!-- #header -->
 
 <div id="content">
-<h1>web旺旺技术变迁的一些笔记痕迹</h1>
+<h1>使用 connect 进行web开发</h1>
 
-<h2>如何确定一个连接？</h2>
+<p>nodejs的web开发，目前最受欢迎的必然是 <a href="http://expressjs.com/" title="High performance, high class web development for Node.js">express</a>。</p>
 
-<p>这是一个很有价值而又让人无法一下子得出答案的问题：</p>
+<p>但是我觉得 <a href="http://expressjs.com/" title="High performance, high class web development for Node.js">express</a> 太过复杂了，而且很多功能都不一定会使用上。</p>
 
-<p>答：原ip，原端口，目的ip，目的端口。</p>
-
-<h2>TCP状态</h2>
-
-<p>结合TCP各个状态的转换图，来看看Linux的TCP调优参数及说明：</p>
-
-<p><img src="http://pic002.cnblogs.com/images/2011/18546/2011031710365593.jpg" alt="TCP各个状态的转换图" title="" /></p>
-
-<h2>Linux的TCP调优参数及说明</h2>
-
-<pre class="prettyprint"><code>//向外连接可用端口范围
-echo “1024 65535” &gt; /proc/sys/net/ipv4/ip_local_port_range
-//time_wait连接重用
-echo 1 &gt; /proc/sys/net/ipv4/tcp_tw_reuse 
-//快速回收time_wait连接
-echo 1 &gt; /proc/sys/net/ipv4/tcp_tw_recycle 
-//最大time_wait连接长度
-echo 180000 &gt; /proc/sys/net/ipv4/tcp_max_tw_buckets 
-//最大等待处于客户端还没有应答回来的连接数（在三次握手中）
-echo 20000 &gt; /proc/sys/net/ipv4/tcp_max_syn_backlog 
-//每一个处于监听(Listen)状态端口的监听队列的长度(establisthed 状态之前)
-echo 10000 &gt; /proc/sys/net/core/somaxconn 
-//最大等待cpu处理的包的数目
-echo 10000 &gt; /proc/sys/net/core/netdev_max_backlog 
-//最大打开文体数
-echo 2000000 &gt; /proc/sys/fs/file-max 
-//FIN-WAIT-2状态等待回收时间
-echo 3 &gt; /proc/sys/net/ipv4/tcp_fin_timeout 
-//最大的TCP数据接收缓冲大小
-/proc/sys/net/core/rmem_max 
-//默认的TCP数据接收缓冲大小
-/proc/sys/net/core/rmem_default 
-//最大的TCP数据发送缓冲大小
-/proc/sys/net/core/wmem_max 
-//默认的TCP数据接收缓冲大小
-/proc/sys/net/core/wmem_default  
-
-/*
-PS:
-/proc目录下的所有内容都是临时性的, 所以重启动系统后任何修改都会丢失，
-增加到/etc/rc.local文件,系统重新引导的时候会自动修改
-*/
-</code></pre>
-
-<h3>有爱</h3>
-
-<p>^_^ 非常感谢这样的分享会，受益良多啊！</p>
+<p>于是我最近都在想如何脱离 <a href="http://expressjs.com/" title="High performance, high class web development for Node.js">express</a> ，基于 <a href="http://senchalabs.github.com/connect" title="Connect is a middleware framework for node, shipping with over 18 bundled middleware and a rich selection of 3rd-party middleware.">connect</a> ，结合刚好满足需求功能的 <code>middleware</code>，进行web开发。</p>
 
 <h2>Comments</h2>
 <div id="disqus_thread"></div>
