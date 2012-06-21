@@ -2,6 +2,8 @@
 
 ## Articles
 
+* [NPM tricks](http://www.devthought.com/2012/02/17/npm-tricks/)
+* [Testing Private State and Mocking Dependencies](http://howtonode.org/testing-private-state-and-mocking-deps)
 * [Node.js Manual](http://nodemanual.org/latest/)
 * [Writing for node and the browser](http://caolanmcmahon.com/posts/writing_for_node_and_the_browser)
 * [Setting up Mocha & JSCoverage](http://www.seejohncode.com/2012/03/13/setting-up-mocha-jscoverage/)

@@ -2,6 +2,7 @@
 
 ## Articles
 
+* [开源JavaScript执行热图生成工具](http://www.alloyteam.com/2012/06/javascript-the-profiler/)
 * [http://calendar.perfplanet.com/2010/bulletproof-javascript-benchmarks/](http://calendar.perfplanet.com/2010/bulletproof-javascript-benchmarks/)
 * [Faster JavaScript Trim](http://blog.stevenlevithan.com/archives/faster-trim-javascript)
 * [Google JavaScript代码风格指南](http://chajn.org/jsguide/javascriptguide.html)

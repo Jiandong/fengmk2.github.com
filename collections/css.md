@@ -1,5 +1,6 @@
 # CSS
 
+* [SASS用法指南](http://www.ruanyifeng.com/blog/2012/06/sass.html)
 * [CSS Hack Table](http://www.swordair.com/tools/css-hack-table/)
 * [各浏览器CSS Hack集锦](http://jndream.net/blog/?p=15)
 * [CSS3 制作Drop Shadow效果](http://www.w3cplus.com/css3/box-drop-down-shadow-with-css3)

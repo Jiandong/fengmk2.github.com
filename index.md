@@ -18,6 +18,8 @@
 
 ## Projects
 
+* [urlrouter](https://github.com/fengmk2/urlrouter) [![Build Status](https://secure.travis-ci.org/fengmk2/urlrouter.png?branch=master)](http://travis-ci.org/fengmk2/urlrouter): `http` url router, `connect` missing router middleware. Support `express` format routing. Support `connect` @1.8.x and @2.2.0+ .
+* [connect-render](https://github.com/fengmk2/connect-render) [![Build Status](https://secure.travis-ci.org/fengmk2/connect-render.png?branch=master)](http://travis-ci.org/fengmk2/connect-render): Template Render helper using ejs for connect, Support connect @1.8.x and @2.2.0+ .
 * [node-weibo](https://github.com/fengmk2/node-weibo) [![Build Status](https://secure.travis-ci.org/fengmk2/node-weibo.png?branch=master)](http://travis-ci.org/fengmk2/node-weibo): weibo nodejs sdk
 * [nodeblog](https://github.com/fengmk2/nodeblog): A blog system base on nodejs. 
 * [ndir](https://github.com/fengmk2/ndir) [![Build Status](https://secure.travis-ci.org/fengmk2/ndir.png)](http://travis-ci.org/fengmk2/ndir): The lost dir util tools. 
