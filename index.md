@@ -21,14 +21,15 @@
 * [urlrouter](https://github.com/fengmk2/urlrouter) [![Build Status](https://secure.travis-ci.org/fengmk2/urlrouter.png?branch=master)](http://travis-ci.org/fengmk2/urlrouter): `http` url router, `connect` missing router middleware. Support `express` format routing. Support `connect` @1.8.x and @2.2.0+ .
 * [connect-render](https://github.com/fengmk2/connect-render) [![Build Status](https://secure.travis-ci.org/fengmk2/connect-render.png?branch=master)](http://travis-ci.org/fengmk2/connect-render): Template Render helper using ejs for connect, Support connect @1.8.x and @2.2.0+ .
 * [node-weibo](https://github.com/fengmk2/node-weibo) [![Build Status](https://secure.travis-ci.org/fengmk2/node-weibo.png?branch=master)](http://travis-ci.org/fengmk2/node-weibo): weibo nodejs sdk
-* [nodeblog](https://github.com/fengmk2/nodeblog): A blog system base on nodejs. 
-* [ndir](https://github.com/fengmk2/ndir) [![Build Status](https://secure.travis-ci.org/fengmk2/ndir.png)](http://travis-ci.org/fengmk2/ndir): The lost dir util tools. 
-* [mdit](https://github.com/fengmk2/mdit): Markdown it, yes, everything!
-* [tjob](https://github.com/TBEDP/tjob): tao job in social network
-* [nodebox](https://github.com/fengmk2/nodebox): A file box base on nodejs.
-* [metaweblog](https://github.com/fengmk2/metaweblog): MetaWeblog API on Nodejs
-* [urlrar](https://github.com/fengmk2/urlrar): Expand any shorten url for you
+* [nodeblog](https://github.com/fengmk2/nodeblog) [![Build Status](https://secure.travis-ci.org/fengmk2/nodeblog.png?branch=master)](http://travis-ci.org/fengmk2/nodeblog): A blog system base on nodejs. 
+* [ndir](https://github.com/fengmk2/ndir) [![Build Status](https://secure.travis-ci.org/fengmk2/ndir.png?branch=master)](http://travis-ci.org/fengmk2/ndir): The lost dir util tools. 
+* [mdit](https://github.com/fengmk2/mdit) [![Build Status](https://secure.travis-ci.org/fengmk2/mdit.png?branch=master)](http://travis-ci.org/fengmk2/mdit): Markdown it, yes, everything!
+* [tjob](https://github.com/TBEDP/tjob) [![Build Status](https://secure.travis-ci.org/fengmk2/todo.png?branch=master)](http://travis-ci.org/fengmk2/todo): tao job in social network
+* [nodebox](https://github.com/fengmk2/nodebox) [![Build Status](https://secure.travis-ci.org/fengmk2/nodebox.png?branch=master)](http://travis-ci.org/fengmk2/nodebox): A file box base on nodejs.
+* [metaweblog](https://github.com/fengmk2/metaweblog) [![Build Status](https://secure.travis-ci.org/fengmk2/metaweblog.png?branch=master)](http://travis-ci.org/fengmk2/metaweblog): MetaWeblog API on Nodejs
+* [urlrar](https://github.com/fengmk2/urlrar) [![Build Status](https://secure.travis-ci.org/fengmk2/urlrar.png?branch=master)](http://travis-ci.org/fengmk2/urlrar): Expand any shorten url for you
 * [urllib](https://github.com/TBEDP/urllib) [![Build Status](https://secure.travis-ci.org/TBEDP/urllib.png)](http://travis-ci.org/TBEDP/urllib): Help in opening URLs (mostly HTTP) in a complex world — basic and digest authentication, redirections, cookies and more. Like python's _urllib_ module.
+* [mongoskin](https://github.com/kissjs/node-mongoskin) [![Build Status](https://secure.travis-ci.org/kissjs/node-mongoskin.png?branch=master)](https://secure.travis-ci.org/kissjs/node-mongoskin): A mongodb driver. This module is a wrapper of [node-mongodb-native](http://christkv.github.com/node-mongodb-native/).
 * [iFrame](https://github.com/windyrobin/iFrame): Nodejs code styles guide documents.
 * [FaWave](https://chrome.google.com/webstore/detail/aicelmgbddfgmpieedjiggifabdpcnln): FaWave, is a Chrome extension supporting multiple microblogging, which can make all microblogs synchronously updating, work seamlessly across multiple microblogs when you switch between them.
 <br/>![fawave prev](http://ww2.sinaimg.cn/large/6cfc7910jw1dp88kwaao5j.jpg)
