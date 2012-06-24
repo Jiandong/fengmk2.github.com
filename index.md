@@ -50,6 +50,7 @@
 
 ## Application
 
+* [Emoji](./emoji/)
 * [Markdown Preview](./browser.html)
 * [NAE-CLI](http://club.cnodejs.org/topic/4f387648301a48d50e003d4c)
 * [CNodejs抽奖程序](/lottery/index.html)
