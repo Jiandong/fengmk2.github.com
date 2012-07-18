@@ -1,5 +1,7 @@
 # Linux
 
+* [Famous Awk One-Liners Explained, Part I: File Spacing, Numbering and Calculations](http://www.catonmat.net/blog/awk-one-liners-explained-part-one/)
+* [Bash One-Liners Explained, Part I: Working with files](http://www.catonmat.net/blog/bash-one-liners-explained-part-one/)
 * [gnuplot](http://www.gnuplot.info/): 画图工具
 * [linux下poll和epoll内核源代码剖析](http://donghao.org/2009/08/linuxiapolliepollaueouaeaeeio.html)
 * [linux异步IO浅析](http://hi.baidu.com/_kouu/blog/item/e225f67b337841f42f73b341.html)

@@ -1,20 +1,15 @@
 # MK2's Blog use markdown in github
 
 ## Who is MK2
+
 ![mk2 photo](https://secure.gravatar.com/avatar/95b9d41231617a05ced5604d242c9670?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png)
-* Github: [@fengmk](https://github.com/fengmk2)
+
+* Github: [@fengmk2](https://github.com/fengmk2)
 * Weibo: [@Python发烧友](http://weibo.com/imk2)
 * Twitter: [@fengmk2](http://twitter.com/fengmk2)
 * 腾讯微博: [@fengmk2](http://t.qq.com/fengmk2)
 * cnblogs: [让生活Web个够](http://fengmk2.cnblogs.com/)
-* Node Club: [@suqian](http://club.cnodejs.org/user/suqian)
-* NodeBlog: [http://nodeblog.org/](http://nodeblog.org/)
-
-## Events
-
-* [Alibaba Developer Conference]: <a href="http://adc.taobao.com/" target="_blank"><img src="http://adc.taobao.com/bundles/devcarnival/images/d2_728x90.jpg" width="728" height="90" alt="ADC·阿里技术嘉年华（7月7-8日·杭州）" /></a>
-
-[Alibaba Developer Conference]: http://adc.taobao.com/
+* Node Club: [@suqian](http://cnodejs.org/user/suqian)
 
 ## Projects
 
@@ -76,6 +71,12 @@
 * [Blog/2010](/blog/2010)
 * [Blog/2009](/blog/2009)
 * [Blog](/blog/)
+
+## Events
+
+* [Alibaba Developer Conference]: <a href="http://adc.taobao.com/" target="_blank"><img src="http://adc.taobao.com/bundles/devcarnival/images/d2_728x90.jpg" width="728" height="90" alt="ADC·阿里技术嘉年华（7月7-8日·杭州）" /></a>
+
+[Alibaba Developer Conference]: http://adc.taobao.com/
 
 ## Clone MK2's Blog
 

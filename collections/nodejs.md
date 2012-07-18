@@ -2,6 +2,7 @@
 
 ## Articles
 
+* [History of Node and more](http://alex-js.tumblr.com/post/26556598264/history-of-node-and-more)
 * [NPM tricks](http://www.devthought.com/2012/02/17/npm-tricks/)
 * [Testing Private State and Mocking Dependencies](http://howtonode.org/testing-private-state-and-mocking-deps)
 * [Node.js Manual](http://nodemanual.org/latest/)

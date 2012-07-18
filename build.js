@@ -13,6 +13,7 @@ var ndir = require('../ndir');
 var path = require('path');
 var fs = require('fs');
 
+var existsSync = fs.existsSync || path.existsSync;
 var page_layout = path.join(__dirname, 'page-layout.html');
 var layout = path.join(__dirname, 'layout.html');
 
@@ -90,7 +91,7 @@ walker.on('end', function () {
           name = url + '/';
         } else if (name !== 'index.html' && ext === '.html') {
           var mdpath = info[0].replace(/\.html$/, '.md');
-          if (path.existsSync(mdpath)) {
+          if (existsSync(mdpath)) {
             var md = fs.readFileSync(mdpath, 'utf-8');
             var title = md.split('\n', 1)[0].substring(1); // skip `#`
             name = title;

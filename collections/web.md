@@ -1,5 +1,6 @@
 # Web
 
+* [ab(Apache Benchmark)运行apr_socket_recv报错](http://sunliwen.com/2012/01/mac-ab-apr-error/)
 * [UTF-8编码的页面向GBK页面提交表单乱码问题的解决办法](http://www.linux265.com/blog/index.php/archives/1265)
 * [数据摘要算法的测试效率(SHA、MD5和CRC32)](http://www.pslib.com/index.php?mod=skill&action=detail&id=43881): MD5最快并且最省CPU.
 * [如何判断页面的编码？](http://blog.goddyzhao.me/post/20532303004/how-to-detect-charset-of-the-page)
