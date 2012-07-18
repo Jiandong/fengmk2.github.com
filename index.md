@@ -74,6 +74,7 @@
 
 ## Events
 
+* [Hu.js](hujs2012.aliapp.com): 九月12－14日，上海, 一个为中国Javascript和Node.js开发者社区举办的会议
 * [Alibaba Developer Conference]: <a href="http://adc.taobao.com/" target="_blank"><img src="http://adc.taobao.com/bundles/devcarnival/images/d2_728x90.jpg" width="728" height="90" alt="ADC·阿里技术嘉年华（7月7-8日·杭州）" /></a>
 
 [Alibaba Developer Conference]: http://adc.taobao.com/
