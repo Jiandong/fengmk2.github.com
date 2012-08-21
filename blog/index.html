@@ -3,17 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="description" content="MK2's blog，生命是一场幻觉，代码是一段人生。"/>
-  <link rel="stylesheet" href="http://fengmk2.github.com/css/typo.css" />
+  <link rel="stylesheet" href="http://typo.sofish.de/typo.css" />
   <link rel="stylesheet" href="http://fengmk2.github.com/css/prettify.css" />
   <script src="http://fengmk2.github.com/js/jquery-1.7.min.js"></script>
   <script src="http://fengmk2.github.com/js/prettify.js"></script>
   <title>Index of /blog</title>
   <style>
-     body {
-      font-family: Monaco, Helvetica, Arial, FreeSans, san-serif;
-     }
      a{color:#09f;}
      code{color:#080;}
+     pre{line-height: 1.4;}
      h1, #tagline{display:inline;}
      #wrapper{padding:5% 8%;min-width:480px;}
      #tagline{font:0.8em serif;color:#888;display:inline-block;margin:0.1em 0 1.2em;}
@@ -30,7 +28,6 @@
 
 <div id="content">
 <h1>Index of /blog</h1>
-
 <ul>
 <li><a href="/blog/icache">/blog/icache/</a></li>
 <li><a href="/blog/c">/blog/c/</a></li>
@@ -47,12 +44,13 @@
 <li><a href="/blog/icache.html"> Indexed Cache</a></li>
 <li><a href="/blog/how-to-use-mongoose.html"> Mongoose 介绍和使用</a></li>
 <li><a href="/blog/how-to-add-oauth-for-weibo.html"> 让nodejs写的web应用接入微博用户登录</a></li>
-<li><a href="/blog/helloworld-benchmark.html"> Nodejs "Hello world" benchmark</a></li>
+<li><a href="/blog/helloworld-benchmark.html"> Nodejs &quot;Hello world&quot; benchmark</a></li>
 <li><a href="/blog/express-csrf.html"> CSRF(Cross Site Request Forgery protection) for Express</a></li>
 <li><a href="/blog/appkey.html"> weibo appkey </a></li>
-<li><a href="/blog/accidental_complexity.html"> Nodejs asynchronous programming bring "Accidental complexity" : Nodejs异步编程带来的意外复杂性</a></li>
+<li><a href="/blog/accidental_complexity.html"> Nodejs asynchronous programming bring &quot;Accidental complexity&quot; : Nodejs异步编程带来的意外复杂性</a></li>
 <li><a href="/blog/README.html"> Blog useing markdown format </a></li>
 </ul>
+
 
 <h2>Comments</h2>
 <div id="disqus_thread"></div>
@@ -83,6 +81,7 @@
 <!-- Specific to this page -->
 <script>
 $(function() {
+  $('pre code').parent().addClass('prettyprint');
   prettyPrint();
 });
 </script>

@@ -3,17 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="description" content="MK2's blog，生命是一场幻觉，代码是一段人生。"/>
-  <link rel="stylesheet" href="http://fengmk2.github.com/css/typo.css" />
+  <link rel="stylesheet" href="http://typo.sofish.de/typo.css" />
   <link rel="stylesheet" href="http://fengmk2.github.com/css/prettify.css" />
   <script src="http://fengmk2.github.com/js/jquery-1.7.min.js"></script>
   <script src="http://fengmk2.github.com/js/prettify.js"></script>
   <title>Index of /blog/2011/07</title>
   <style>
-     body {
-      font-family: Monaco, Helvetica, Arial, FreeSans, san-serif;
-     }
      a{color:#09f;}
      code{color:#080;}
+     pre{line-height: 1.4;}
      h1, #tagline{display:inline;}
      #wrapper{padding:5% 8%;min-width:480px;}
      #tagline{font:0.8em serif;color:#888;display:inline-block;margin:0.1em 0 1.2em;}
@@ -30,12 +28,12 @@
 
 <div id="content">
 <h1>Index of /blog/2011/07</h1>
-
 <ul>
 <li><a href="/blog/2011/07/simple-todo.html"> nodejs web开发入门: Simple-TODO Nodejs 实现版</a></li>
 <li><a href="/blog/2011/07/callback-and-callback-and-callback.html"> Callback again again and again in Nodejs</a></li>
 <li><a href="/blog/2011/07/buffer-for-freedom-in-nodejs.html"> 关于Nodejs中Buffer释放的二三事</a></li>
 </ul>
+
 
 <h2>Comments</h2>
 <div id="disqus_thread"></div>
@@ -66,6 +64,7 @@
 <!-- Specific to this page -->
 <script>
 $(function() {
+  $('pre code').parent().addClass('prettyprint');
   prettyPrint();
 });
 </script>

@@ -3,17 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="description" content="MK2's blog，生命是一场幻觉，代码是一段人生。"/>
-  <link rel="stylesheet" href="http://fengmk2.github.com/css/typo.css" />
+  <link rel="stylesheet" href="http://typo.sofish.de/typo.css" />
   <link rel="stylesheet" href="http://fengmk2.github.com/css/prettify.css" />
   <script src="http://fengmk2.github.com/js/jquery-1.7.min.js"></script>
   <script src="http://fengmk2.github.com/js/prettify.js"></script>
   <title>Index of /blog/2011/11</title>
   <style>
-     body {
-      font-family: Monaco, Helvetica, Arial, FreeSans, san-serif;
-     }
      a{color:#09f;}
      code{color:#080;}
+     pre{line-height: 1.4;}
      h1, #tagline{display:inline;}
      #wrapper{padding:5% 8%;min-width:480px;}
      #tagline{font:0.8em serif;color:#888;display:inline-block;margin:0.1em 0 1.2em;}
@@ -30,13 +28,13 @@
 
 <div id="content">
 <h1>Index of /blog/2011/11</h1>
-
 <ul>
 <li><a href="/blog/2011/11/let-your-search-use-in-chrome.html"> 让你的搜索出现在Chrome地址栏智能搜索中</a></li>
 <li><a href="/blog/2011/11/forever-webui.html"> [nodejs]保证你的程序死了还能复活：forever and forever webui</a></li>
 <li><a href="/blog/2011/11/buffer-performance.html"> Buffer性能测试</a></li>
 <li><a href="/blog/2011/11/about-__proto__.html"> 关于<strong>proto</strong>的链式记忆</a></li>
 </ul>
+
 
 <h2>Comments</h2>
 <div id="disqus_thread"></div>
@@ -67,6 +65,7 @@
 <!-- Specific to this page -->
 <script>
 $(function() {
+  $('pre code').parent().addClass('prettyprint');
   prettyPrint();
 });
 </script>

@@ -3,17 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="description" content="MK2's blog，生命是一场幻觉，代码是一段人生。"/>
-  <link rel="stylesheet" href="http://fengmk2.github.com/css/typo.css" />
+  <link rel="stylesheet" href="http://typo.sofish.de/typo.css" />
   <link rel="stylesheet" href="http://fengmk2.github.com/css/prettify.css" />
   <script src="http://fengmk2.github.com/js/jquery-1.7.min.js"></script>
   <script src="http://fengmk2.github.com/js/prettify.js"></script>
   <title>Index of /blog/2011/05</title>
   <style>
-     body {
-      font-family: Monaco, Helvetica, Arial, FreeSans, san-serif;
-     }
      a{color:#09f;}
      code{color:#080;}
+     pre{line-height: 1.4;}
      h1, #tagline{display:inline;}
      #wrapper{padding:5% 8%;min-width:480px;}
      #tagline{font:0.8em serif;color:#888;display:inline-block;margin:0.1em 0 1.2em;}
@@ -30,7 +28,6 @@
 
 <div id="content">
 <h1>Index of /blog/2011/05</h1>
-
 <ul>
 <li><a href="/blog/2011/05/8">/blog/2011/05/8/</a></li>
 <li><a href="/blog/2011/05/25">/blog/2011/05/25/</a></li>
@@ -39,6 +36,7 @@
 <li><a href="/blog/2011/05/fetch-non-utf8-charset-webpage.html"> Nodejs抓取非utf8字符编码的页面</a></li>
 <li><a href="/blog/2011/05/currying-the-callback.html"> Nodejs中的嵌套callback</a></li>
 </ul>
+
 
 <h2>Comments</h2>
 <div id="disqus_thread"></div>
@@ -69,6 +67,7 @@
 <!-- Specific to this page -->
 <script>
 $(function() {
+  $('pre code').parent().addClass('prettyprint');
   prettyPrint();
 });
 </script>

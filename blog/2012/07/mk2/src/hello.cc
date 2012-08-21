@@ -13,6 +13,11 @@ Handle<Value> HelloNoClose(const Arguments& args) {
   return String::New("world no close");
 }
 
+Handle<Value> GetUndefined(const Arguments& args) {
+  HandleScope scope;
+  return Undefined();
+}
+
 // https://developers.google.com/v8/embed?hl=zh-CN#handles
 // This function returns a new array with three elements, x, y, and z.
 Handle<Value> NewPointArray(const Arguments& args) {
@@ -56,6 +61,16 @@ Handle<Value> NewPointArrayNoClose(const Arguments& args) {
   return array;
 }
 
+Handle<Value> Cycle(const Arguments& args) {
+  HandleScope scope;
+  int n = args[0]->Int32Value();
+  int s = 0, i = 0;
+  for (i = 0; i < n; i++) {
+    s++;
+  }
+  return scope.Close(Integer::New(s));
+}
+
 void init(Handle<Object> target) {
   target->Set(String::NewSymbol("hello"),
     FunctionTemplate::New(Hello)->GetFunction());
@@ -65,5 +80,9 @@ void init(Handle<Object> target) {
     FunctionTemplate::New(NewPointArray)->GetFunction());
   target->Set(String::NewSymbol("newPointArrayNoClose"),
     FunctionTemplate::New(NewPointArrayNoClose)->GetFunction());
+  target->Set(String::NewSymbol("cycle"),
+    FunctionTemplate::New(Cycle)->GetFunction());
+  target->Set(String::NewSymbol("getUndefined"),
+    FunctionTemplate::New(GetUndefined)->GetFunction());
 }
 NODE_MODULE(mk2, init)

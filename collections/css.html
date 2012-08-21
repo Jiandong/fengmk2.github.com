@@ -3,17 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="description" content="MK2's blog，生命是一场幻觉，代码是一段人生。"/>
-  <link rel="stylesheet" href="/css/typo.css" />
-  <link rel="stylesheet" href="/css/prettify.css">
-  <script src="/js/jquery-1.7.min.js"></script>
-  <script src="/js/prettify.js"></script>
+  <link rel="stylesheet" href="http://typo.sofish.de/typo.css" />
+  <link rel="stylesheet" href="http://fengmk2.github.com/css/prettify.css" />
+  <script src="http://fengmk2.github.com/js/jquery-1.7.min.js"></script>
+  <script src="http://fengmk2.github.com/js/prettify.js"></script>
   <title>CSS</title>
   <style>
-     body {
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-     }
      a{color:#09f;}
      code{color:#080;}
+     pre{line-height: 1.4;}
      h1, #tagline{display:inline;}
      #wrapper{padding:5% 8%;min-width:480px;}
      #tagline{font:0.8em serif;color:#888;display:inline-block;margin:0.1em 0 1.2em;}
@@ -30,7 +28,6 @@
 
 <div id="content">
 <h1>CSS</h1>
-
 <ul>
 <li><a href="http://www.ruanyifeng.com/blog/2012/06/sass.html">SASS用法指南</a></li>
 <li><a href="http://www.swordair.com/tools/css-hack-table/">CSS Hack Table</a></li>
@@ -41,6 +38,7 @@
 <li><a href="http://fis.io/css-3-hover-animations.html">学习笔记: CSS3 鼠标悬停动画</a></li>
 <li><a href="http://css.doyoe.com/">CSS参考手册</a></li>
 </ul>
+
 
 <h2>Comments</h2>
 <div id="disqus_thread"></div>
@@ -71,7 +69,6 @@
 <!-- Specific to this page -->
 <script>
 $(function() {
-  // Deck initialization
   $('pre code').parent().addClass('prettyprint');
   prettyPrint();
 });

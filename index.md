@@ -71,6 +71,7 @@
 * [Blog/2010](/blog/2010)
 * [Blog/2009](/blog/2009)
 * [Blog](/blog/)
+* [习得的乐观测试](./Learned-Optimism-Test.htm)
 
 ## Events
 

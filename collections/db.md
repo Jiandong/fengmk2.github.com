@@ -9,4 +9,3 @@
 * [Redis资料汇总](http://blog.nosqlfan.com/html/1282.html)
 * [MongoDB的8宗罪](http://heikezhi.com/2011/11/09/dont-use-mongod/): http://pastebin.com/raw.php?i=FD3xe6Jt, [From CTO of 10gen](http://news.ycombinator.com/item?id=3202959)
 * [利用Redis构建高效的实时搜索](http://blog.nosqlfan.com/html/3448.html)
-

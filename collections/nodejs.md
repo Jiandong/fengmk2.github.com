@@ -2,6 +2,9 @@
 
 ## Articles
 
+* [Node.js Frameworks Comparison](http://ocdevel.com/blog/nodejs-frameworks-comparison)
+* [让您的应用程序能够适应未来发展需要：Cloud Foundry 与 Node.js 为您办到](http://cnblog.cloudfoundry.com/?p=336)
+* [Callback Hell](http://callbackhell.com/): A guide to writing elegant asynchronous javascript programs
 * [History of Node and more](http://alex-js.tumblr.com/post/26556598264/history-of-node-and-more)
 * [NPM tricks](http://www.devthought.com/2012/02/17/npm-tricks/)
 * [Testing Private State and Mocking Dependencies](http://howtonode.org/testing-private-state-and-mocking-deps)
@@ -51,6 +54,7 @@
 
 ## Modules
 
+* [Tour of npm](http://tobyho.com/2012/02/09/tour-of-npm/)
 * [Moment.js](http://momentjs.com/): A lightweight javascript date library for parsing, manipulating, and formatting dates.
 * [Mocha - A great test framework for Node.js](http://www.bryandonovan.com/blog/2011/12/05/mocha-a-great-test-framework-for-nodejs/)
 * [node.js extensions with C++ and V8](http://kkaefer.github.com/node-cpp-modules/)
