@@ -1,6 +1,6 @@
 # 模拟 Nagle 算法的Delayed Ack
 
-最近做了keepalive优化，在线上应用使用了[agentkeepliave]，
+最近做了keepalive优化，在线上应用使用了[agentkeepalive]，
 从监控系统观察到，我们预期的 [TIME_WAIT] 过多的问题解决了；
 但是，应用的响应时间RT在非正常的情况下，很平均地涨了40ms，由原来的4-5ms，涨到44-46ms之间。
 

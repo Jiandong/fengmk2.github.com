@@ -28,7 +28,7 @@
 
 <div id="content">
 <h1>模拟 Nagle 算法的Delayed Ack</h1>
-<p>最近做了keepalive优化，在线上应用使用了[agentkeepliave]，
+<p>最近做了keepalive优化，在线上应用使用了<a href="https://github.com/TBEDP/agentkeepalive">agentkeepalive</a>，
 从监控系统观察到，我们预期的 <a href="http://serverfault.com/questions/219939/too-many-time-wait-state-connections">TIME_WAIT</a> 过多的问题解决了；
 但是，应用的响应时间RT在非正常的情况下，很平均地涨了40ms，由原来的4-5ms，涨到44-46ms之间。
 
