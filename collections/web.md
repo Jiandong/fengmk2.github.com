@@ -1,5 +1,7 @@
 # Web
 
+* [API 设计：让牛懂琴](http://sofish.de/2100)
+* [RESTful API Design](http://www.slideshare.net/fullscreen/apigee/restful-api-design-second-edition/2)
 * [ab(Apache Benchmark)运行apr_socket_recv报错](http://sunliwen.com/2012/01/mac-ab-apr-error/)
 * [UTF-8编码的页面向GBK页面提交表单乱码问题的解决办法](http://www.linux265.com/blog/index.php/archives/1265)
 * [数据摘要算法的测试效率(SHA、MD5和CRC32)](http://www.pslib.com/index.php?mod=skill&action=detail&id=43881): MD5最快并且最省CPU.

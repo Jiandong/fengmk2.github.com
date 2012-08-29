@@ -2,6 +2,8 @@
 
 ## Articles
 
+* [Node.js w/1M concurrent connections!](http://blog.caustik.com/2012/08/19/node-js-w1m-concurrent-connections/)
+* [Escape the 1.4GB V8 heap limit in Node.js!](http://blog.caustik.com/2012/04/11/escape-the-1-4gb-v8-heap-limit-in-node-js/)
 * [Node.js Frameworks Comparison](http://ocdevel.com/blog/nodejs-frameworks-comparison)
 * [让您的应用程序能够适应未来发展需要：Cloud Foundry 与 Node.js 为您办到](http://cnblog.cloudfoundry.com/?p=336)
 * [Callback Hell](http://callbackhell.com/): A guide to writing elegant asynchronous javascript programs
@@ -54,6 +56,7 @@
 
 ## Modules
 
+* [node-webkit](https://github.com/rogerwang/node-webkit)
 * [Tour of npm](http://tobyho.com/2012/02/09/tour-of-npm/)
 * [Moment.js](http://momentjs.com/): A lightweight javascript date library for parsing, manipulating, and formatting dates.
 * [Mocha - A great test framework for Node.js](http://www.bryandonovan.com/blog/2011/12/05/mocha-a-great-test-framework-for-nodejs/)
