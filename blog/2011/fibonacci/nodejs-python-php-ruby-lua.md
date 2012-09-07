@@ -20,17 +20,17 @@ I implement the **fibonacci function** in other **[Dynamic Languages](http://en.
 
 ### Static
 
-* [c](http://en.wikipedia.org/wiki/C_\(programming_language\))
+* [c](http://en.wikipedia.org/wiki/C_programming_language)
 * [go](http://golang.org/)
 
 If you want to help add more dynamic languagues, please leave the **implement code** in comments.
 
 ## Results
 
-(^_^) c > go > luajit > nodejs > pypy > lua > python > php > perl > ruby1.9.3 > ruby1.8.5 (T_T)
+(^_^) c > go > luajit > nodejs > pypy > lua > python > php > perl > ruby (T_T)
 
 <table>
-  <tr><th>Language</th><th>Times</th><th>Position</th><th>Version</th></tr>
+  <tr><th>Language</th><th>Times (user)</th><th>Position</th><th>Version</th></tr>
   <tr>
     <td style="color: green;">c with -O2</td><td>0m0.187s</td><td>#0</td>
     <td>i686-apple-darwin11-llvm-gcc-4.2 (GCC) 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)</td>
