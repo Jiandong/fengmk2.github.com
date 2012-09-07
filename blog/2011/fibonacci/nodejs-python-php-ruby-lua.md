@@ -45,7 +45,7 @@ If you want to help add more dynamic languagues, please leave the **implement co
   </tr>
   <tr>
     <td style="color: green;">luajit</td><td>0m2.463s</td><td>#3</td>
-    <td>LuaJIT 2.0.0-beta10 -- Copyright (C) 2005-2012 Mike Pall. http://luajit.org/</td>
+    <td>LuaJIT 2.0.0-beta10 -- Copyright (C) 2005-2012 Mike Pall.</td>
   </tr>
   <tr>
     <td style="color: green;">nodejs</td><td>0m2.826s</td><td>#4</td>
