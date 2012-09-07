@@ -1,5 +1,7 @@
 # Web
 
+* [德鲁克真的过时了吗？](http://home.wangjianshuo.com/cn/20120820_ecceaeie.htm)
+* [为什么百姓网开源？](http://home.wangjianshuo.com/cn/20120904_ccaeaeaeie.htm)
 * [API 设计：让牛懂琴](http://sofish.de/2100)
 * [RESTful API Design](http://www.slideshare.net/fullscreen/apigee/restful-api-design-second-edition/2)
 * [ab(Apache Benchmark)运行apr_socket_recv报错](http://sunliwen.com/2012/01/mac-ab-apr-error/)
