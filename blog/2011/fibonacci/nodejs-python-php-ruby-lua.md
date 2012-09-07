@@ -11,7 +11,7 @@ I implement the **fibonacci function** in other **[Dynamic Languages](http://en.
 * [nodejs](http://nodejs.org)
 * [nodejs + cpp module](http://kkaefer.github.com/node-cpp-modules)
 * [python](http://python.org)
-* [pypy](http://pypy.org/): a fast, compliant alternative implementation of the Python language (2.7.1). 
+* [pypy](http://pypy.org/): a fast, compliant alternative implementation of the Python language. 
 * [perl](http://perl.org) 
 * [php](http://www.php.net/)
 * [ruby](http://www.ruby-lang.org/)
@@ -447,5 +447,6 @@ sys 0m0.507s
 
 ## Conclusion
 
+* **go** is **awsome**!
 * **nodejs** is **FAST**, v0.8+ is **FASTER**. 
 * **luajit** 2X faster than nodejs@0.6.x, **Shocking**.
