@@ -1,4 +1,7 @@
 .settings
+blog/2011/fibonacci/build
+.lock-wscript
+a.out
 blog/.DS_Store
 .project
 .pydevproject

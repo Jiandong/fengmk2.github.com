@@ -1,2 +1,2 @@
-var fibonacci = require('./build/default/cppfibonacci').fibonacci;
+var fibonacci = require('./build/Release/cppfibonacci').fibonacci;
 console.log(fibonacci(40));
