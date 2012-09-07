@@ -36,12 +36,12 @@ If you want to help add more dynamic languagues, please leave the **implement co
     <td>i686-apple-darwin11-llvm-gcc-4.2 (GCC) 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)</td>
   </tr>
   <tr>
-    <td style="color: green;">go</td><td>0m1.664s</td><td>#1</td>
-    <td>go version go1.0.2</td>
+    <td style="color: green;">node + cpp module</td><td>0m1.417s</td><td>#1</td>
+    <td>v0.8.8, gcc -O2</td>
   </tr>
   <tr>
-    <td style="color: green;">node + cpp module</td><td>0m1.417s</td><td>#2</td>
-    <td>v0.8.8, gcc -O2</td>
+    <td style="color: green;">go</td><td>0m1.664s</td><td>#2</td>
+    <td>go version go1.0.2</td>
   </tr>
   <tr>
     <td style="color: green;">luajit</td><td>0m2.463s</td><td>#3</td>
