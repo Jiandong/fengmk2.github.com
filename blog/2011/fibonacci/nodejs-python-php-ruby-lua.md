@@ -30,19 +30,51 @@ If you want to help add more dynamic languagues, please leave the **implement co
 (^_^) c > go > luajit > nodejs > pypy > lua > python > php > perl > ruby1.9.3 > ruby1.8.5 (T_T)
 
 <table>
-  <tr><th>Language</th><th>Times</th><th>Position</th></tr>
-  <tr><td style="color: green;">c</td><td>0m1.606s</td><td>#0</td></tr>
-  <tr><td style="color: green;">go</td><td>0m1.769s</td><td>#1</td></tr>
-  <tr><td style="color: green;">node + cpp module</td><td>0m2.216s</td><td>#2</td></tr>
-  <tr><td style="color: green;">luajit</td><td>0m2.583s</td><td>#3</td></tr>
-  <tr><td style="color: green;">nodejs</td><td>0m5.124s</td><td>#4</td></tr>
-  <tr><td style="color: green;">pypy</td><td>0m7.562s</td><td>#5</td></tr>
-  <tr><td>lua</td><td>0m34.492s</td><td>#6</td></tr>
-  <tr><td>python</td><td>1m11.647s</td><td>#7</td></tr>
-  <tr><td>php</td><td>1m28.198s</td><td>#8</td></tr>
-  <tr><td>perl</td><td>2m34.658s</td><td>#9</td></tr>
-  <tr><td style="color: red;">ruby 1.9.3</td><td>4m40.790s</td><td>#10</td></tr>
-  <tr><td style="color: red;">ruby 1.8.5</td><td>4m41.942s</td><td>#11</td></tr>
+  <tr><th>Language</th><th>Times</th><th>Position</th><th>Version</th></tr>
+  <tr>
+    <td style="color: green;">c with -O2</td><td>0m0.187s</td><td>#0</td>
+    <td>i686-apple-darwin11-llvm-gcc-4.2 (GCC) 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)</td>
+  </tr>
+  <tr>
+    <td style="color: green;">go</td><td>0m1.664s</td><td>#1</td>
+    <td>go version go1.0.2</td>
+  </tr>
+  <tr>
+    <td style="color: green;">node + cpp module</td><td>0m1.417s</td><td>#2</td>
+    <td>v0.8.8, gcc -O2</td>
+  </tr>
+  <tr>
+    <td style="color: green;">luajit</td><td>0m2.463s</td><td>#3</td>
+    <td>LuaJIT 2.0.0-beta10 -- Copyright (C) 2005-2012 Mike Pall. http://luajit.org/</td>
+  </tr>
+  <tr>
+    <td style="color: green;">nodejs</td><td>0m2.826s</td><td>#4</td>
+    <td>v0.8.8</td>
+  </tr>
+  <tr>
+    <td>pypy</td><td>0m29.650s</td><td>#5</td>
+    <td>Python 2.7.2 (341e1e3821ff, Jun 07 2012, 15:42:54) [PyPy 1.9.0 with GCC 4.2.1]</td>
+  </tr>
+  <tr>
+    <td>lua</td><td>0m42.944s</td><td>#6</td>
+    <td>Lua 5.1.4 Copyright (C) 1994-2008 Lua.org, PUC-Rio</td>
+  </tr>
+  <tr>
+    <td style="color: red;">python</td><td>1m19.029s</td><td>#7</td>
+    <td>Python 2.7.2</td>
+  </tr>
+  <tr>
+    <td style="color: red;">php</td><td>1m43.355s</td><td>#8</td>
+    <td>PHP 5.3.13 with Suhosin-Patch (cli) (built: Jun 20 2012 17:05:20)</td>
+  </tr>
+  <tr>
+    <td style="color: red;">perl</td><td>2m30.444s</td><td>#9</td>
+    <td>This is perl 5, version 12, subversion 4 (v5.12.4) built for darwin-thread-multi-2level</td>
+  </tr>
+  <tr>
+    <td style="color: red;">ruby</td><td>3m32.074s</td><td>#10</td>
+    <td>ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]</td>
+  </tr>
 </table>
 
 **lua** use *local function* will get better performance.
@@ -73,9 +105,9 @@ gcc -O0
 ```bash
 165580141
 
-real  0m4.011s
-user  0m3.887s
-sys 0m0.011s
+real  0m3.908s
+user  0m3.884s
+sys 0m0.004s
 ```
 
 gcc -O1
@@ -83,9 +115,9 @@ gcc -O1
 ```bash
 165580141
 
-real  0m1.818s
-user  0m1.774s
-sys 0m0.006s
+real  0m1.783s
+user  0m1.773s
+sys 0m0.003s
 ```
 
 gcc -O2
@@ -93,9 +125,9 @@ gcc -O2
 ```bash
 165580141
 
-real  0m0.210s
-user  0m0.187s
-sys 0m0.003s
+real  0m0.192s
+user  0m0.185s
+sys 0m0.002s
 ```
 
 gcc -O3
@@ -103,9 +135,9 @@ gcc -O3
 ```bash
 165580141
 
-real  0m0.255s
+real  0m0.199s
 user  0m0.187s
-sys 0m0.003s
+sys 0m0.002s
 ```
 
 ### go
@@ -131,9 +163,9 @@ func main() {
 ```bash
 165580141
 
-real  0m1.755s
-user  0m1.664s
-sys 0m0.006s
+real  0m1.686s
+user  0m1.666s
+sys 0m0.004s
 ```
 
 ### nodejs
@@ -154,9 +186,9 @@ v0.4.12
 ```bash
 165580141
 
-real  0m7.576s
-user  0m7.216s
-sys 0m0.039s
+real  0m7.252s
+user  0m7.211s
+sys 0m0.018s
 ```
 
 v0.6.20
@@ -164,9 +196,9 @@ v0.6.20
 ```bash
 165580141
 
-real  0m5.282s
-user  0m5.001s
-sys 0m0.048s
+real  0m5.152s
+user  0m5.127s
+sys 0m0.027s
 ```
 
 v0.8.8
@@ -174,9 +206,9 @@ v0.8.8
 ```bash
 165580141
 
-real  0m3.008s
-user  0m2.832s
-sys 0m0.042s
+real  0m2.894s
+user  0m2.826s
+sys 0m0.020s
 ```
 
 ### nodejs + cpp module
@@ -192,9 +224,9 @@ v0.4.12
 ```bash
 165580141
 
-real  0m3.337s
-user  0m3.184s
-sys 0m0.026s
+real  0m1.474s
+user  0m1.427s
+sys 0m0.015s
 ```
 
 waf 1.5.16 (7610:7647M)
@@ -203,9 +235,9 @@ v0.6.20
 ```bash
 165580141
 
-real  0m3.277s
-user  0m3.173s
-sys 0m0.023s
+real  0m1.444s
+user  0m1.420s
+sys 0m0.013s
 ```
 
 waf 1.5.16 (7610:7647M)
@@ -214,9 +246,9 @@ v0.8.8
 ```bash
 165580141
 
-real  0m3.279s
-user  0m3.168s
-sys 0m0.020s
+real  0m1.436s
+user  0m1.417s
+sys 0m0.014s
 ```
 
 ### luajit
@@ -236,9 +268,9 @@ io.write(fibonacci(40), "\n")
 ```bash
 165580141
 
-real  0m2.697s
-user  0m2.575s
-sys 0m0.009s
+real  0m2.582s
+user  0m2.547s
+sys 0m0.005s
 ```
 
 using 'local'
@@ -257,9 +289,30 @@ io.write(fibonacci(40), "\n")
 ```bash
 165580141
 
-real  0m2.523s
-user  0m2.462s
-sys 0m0.008s
+real  0m2.470s
+user  0m2.463s
+sys 0m0.003s
+```
+
+### pypy
+Python 2.7.2 (341e1e3821ff, Jun 07 2012, 15:42:54)
+[PyPy 1.9.0 with GCC 4.2.1]
+
+```py
+def fibonacci(n):
+    if n < 2:
+        return 1
+    return fibonacci(n - 2) + fibonacci(n - 1)
+    
+print fibonacci(40)
+```
+
+```bash
+165580141
+
+real  0m30.819s
+user  0m29.650s
+sys 0m0.196s
 ```
 
 ### lua

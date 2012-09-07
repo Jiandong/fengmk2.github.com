@@ -122,6 +122,17 @@ echo "\n\`\`\`bash"
 time luajit fibonacci.lua.local
 echo "\`\`\`\n"
 
+echo "### pypy"
+pypy --version
+
+echo "\n\`\`\`py"
+cat fibonacci.py
+echo "\n\`\`\`"
+
+echo "\n\`\`\`bash"
+time pypy fibonacci.py
+echo "\`\`\`\n"
+
 echo "### lua"
 lua -v
 

@@ -11,6 +11,7 @@ def build(ctx):
   t = ctx.new_task_gen('cxx', 'shlib', 'node_addon')
 
   t.source = ['cppfibonacci.cpp']
+  t.cxxflags = ['-O2']
 
   # Must be same as first parameter in NODE_MODULE.
   t.target = 'cppfibonacci'
