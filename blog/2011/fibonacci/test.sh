@@ -1,27 +1,74 @@
-echo "### php"
-php -v | head -1
+echo "### nodejs"
+echo "\n\`\`\`js"
+cat fibonacci.js
+echo "\n\`\`\`\n"
 
-echo "\n\`\`\`php"
-cat fibonacci.php
-echo "\n\`\`\`"
-
+$HOME/git/nvm/v0.2.6/bin/node -v
 echo "\n\`\`\`bash"
-time php fibonacci.php
+time $HOME/git/nvm/v0.2.6/bin/node fibonacci.js
 echo "\`\`\`\n"
 
-$HOME/apps/php-5.4.6/sapi/cli/php -v | head -1
-
+$HOME/git/nvm/v0.3.8/bin/node -v
 echo "\n\`\`\`bash"
-time $HOME/apps/php-5.4.6/sapi/cli/php fibonacci.php
+time $HOME/git/nvm/v0.3.8/bin/node fibonacci.js
 echo "\`\`\`\n"
 
-echo "### perl"
-perl -v | head -2 | grep version
-
-echo "\n\`\`\`perl"
-cat fibonacci.pl
-echo "\n\`\`\`"
-
+$HOME/git/nvm/v0.4.12/bin/node -v
 echo "\n\`\`\`bash"
-time perl fibonacci.pl
+time $HOME/git/nvm/v0.4.12/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.6.19/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.6.19/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.6.20/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.6.20/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.6.21/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.6.21/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.7.12/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.7.12/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.8.0/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.8.0/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.8.1/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.8.1/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.8.3/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.8.3/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.8.6/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.8.6/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.8.7/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.8.7/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.8.8/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.8.8/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.9.1/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.9.1/bin/node fibonacci.js
 echo "\`\`\`\n"

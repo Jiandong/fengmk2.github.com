@@ -30,7 +30,7 @@ If you want to help add more dynamic languagues, please leave the **implement co
 
 ## Results
 
-(^_^) c > java > go > scala > luajit > nodejs > pypy > lua > php > python > perl > ruby (T_T)
+(^_^) c > java > go > scala > luajit > nodejs > pypy > ruby 1.9.3+ > lua > php > python > perl > ruby 1.8.x (T_T)
 
 <table>
   <tr><th>Language</th><th>Times (user)</th><th>Position</th><th>Version</th></tr>
@@ -87,39 +87,45 @@ If you want to help add more dynamic languagues, please leave the **implement co
     <td>Python 2.7.2 (341e1e3821ff, Jun 07 2012, 15:42:54) [PyPy 1.9.0 with GCC 4.2.1]</td>
   </tr>
   <tr>
+    <td style="color: red;">ruby 1.9.x</td>
+    <td>0m37.404s</td>
+    <td>#8</td>
+    <td>ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-darwin12.1.0]</td>
+  </tr>
+  <tr>
     <td style="color: red;">lua</td>
     <td>0m40.709s</td>
-    <td>#8</td>
+    <td>#9</td>
     <td>Lua 5.1.4 Copyright (C) 1994-2008 Lua.org, PUC-Rio</td>
   </tr>
   <tr>
     <td style="color: red;">jython</td>
     <td>0m53.699s</td>
-    <td>#9</td>
+    <td>#10</td>
     <td>Jython 2.5.2</td>
   </tr>
   <tr>
     <td style="color: red;">php</td>
     <td>1m17.728s</td>
-    <td>#10</td>
+    <td>#11</td>
     <td>PHP 5.4.6 (cli) (built: Sep  8 2012 23:49:53) </td>
   </tr>
   <tr>
     <td style="color: red;">python</td>
     <td>1m17.979s</td>
-    <td>#11</td>
+    <td>#12</td>
     <td>Python 2.7.2</td>
   </tr>
   <tr>
     <td style="color: red;">perl</td>
     <td>2m41.259s</td>
-    <td>#12</td>
+    <td>#13</td>
     <td>This is perl 5, version 12, subversion 4 (v5.12.4) built for darwin-thread-multi-2level</td>
   </tr>
   <tr>
-    <td style="color: red;">ruby</td>
+    <td style="color: red;">ruby 1.8.x</td>
     <td>3m35.135s</td>
-    <td>#13</td>
+    <td>#14</td>
     <td>ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]</td>
   </tr>
 </table>
@@ -281,14 +287,44 @@ function fibonacci(n) {
 console.log(fibonacci(40));
 ```
 
+v0.2.6
+
+```bash
+102334155
+
+real  0m4.959s
+user  0m4.699s
+sys 0m0.028s
+```
+
+v0.3.8
+
+```bash
+102334155
+
+real  0m4.961s
+user  0m4.867s
+sys 0m0.022s
+```
+
 v0.4.12
 
 ```bash
 102334155
 
-real  0m7.692s
-user  0m7.221s
-sys 0m0.036s
+real  0m7.544s
+user  0m7.219s
+sys 0m0.030s
+```
+
+v0.6.19
+
+```bash
+102334155
+
+real  0m5.264s
+user  0m5.062s
+sys 0m0.040s
 ```
 
 v0.6.20
@@ -296,9 +332,79 @@ v0.6.20
 ```bash
 102334155
 
-real  0m5.112s
-user  0m4.911s
-sys 0m0.039s
+real  0m5.413s
+user  0m5.195s
+sys 0m0.038s
+```
+
+v0.6.21-pre
+
+```bash
+102334155
+
+real  0m5.081s
+user  0m4.906s
+sys 0m0.037s
+```
+
+v0.7.12
+
+```bash
+102334155
+
+real  0m2.964s
+user  0m2.867s
+sys 0m0.029s
+```
+
+v0.8.0
+
+```bash
+102334155
+
+real  0m3.034s
+user  0m2.868s
+sys 0m0.029s
+```
+
+v0.8.1
+
+```bash
+102334155
+
+real  0m3.064s
+user  0m2.863s
+sys 0m0.032s
+```
+
+v0.8.3
+
+```bash
+102334155
+
+real  0m3.024s
+user  0m2.855s
+sys 0m0.030s
+```
+
+v0.8.6
+
+```bash
+102334155
+
+real  0m3.046s
+user  0m2.854s
+sys 0m0.030s
+```
+
+v0.8.7
+
+```bash
+102334155
+
+real  0m3.258s
+user  0m2.933s
+sys 0m0.033s
 ```
 
 v0.8.8
@@ -306,9 +412,19 @@ v0.8.8
 ```bash
 102334155
 
-real  0m3.529s
-user  0m2.872s
-sys 0m0.040s
+real  0m3.052s
+user  0m2.866s
+sys 0m0.031s
+```
+
+v0.9.1
+
+```bash
+102334155
+
+real  0m3.190s
+user  0m2.852s
+sys 0m0.032s
 ```
 
 ### nodejs + cpp module
@@ -413,6 +529,29 @@ print fibonacci(40)
 real  0m34.082s
 user  0m30.010s
 sys 0m0.303s
+```
+
+### ruby 1.9.x
+
+```ruby
+def fibonacci(n)
+  if n < 2
+    return n
+  end
+  return fibonacci(n - 2) + fibonacci(n - 1)
+end
+
+puts fibonacci(40)
+```
+
+ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-darwin12.1.0]
+
+```bash
+102334155
+
+real  0m39.972s
+user  0m37.404s
+sys 0m0.124s
 ```
 
 ### lua
@@ -543,8 +682,7 @@ user  2m41.259s
 sys 0m0.592s
 ```
 
-### ruby
-ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]
+### ruby 1.8.x
 
 ```ruby
 def fibonacci(n)
@@ -556,6 +694,8 @@ end
 
 puts fibonacci(40)
 ```
+
+ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]
 
 ```bash
 102334155
@@ -570,3 +710,4 @@ sys 0m0.833s
 * **go** is **awsome**!
 * **nodejs** is **FAST**, v0.8+ is **FASTER**. 
 * **luajit** 2X faster than nodejs@0.6.x, **Shocking**.
+* **ruby 1.9.x** faster than lua.

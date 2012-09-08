@@ -79,9 +79,24 @@ echo "\n\`\`\`js"
 cat fibonacci.js
 echo "\n\`\`\`\n"
 
+$HOME/git/nvm/v0.2.6/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.2.6/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.3.8/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.3.8/bin/node fibonacci.js
+echo "\`\`\`\n"
+
 $HOME/git/nvm/v0.4.12/bin/node -v
 echo "\n\`\`\`bash"
 time $HOME/git/nvm/v0.4.12/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.6.19/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.6.19/bin/node fibonacci.js
 echo "\`\`\`\n"
 
 $HOME/git/nvm/v0.6.20/bin/node -v
@@ -89,9 +104,49 @@ echo "\n\`\`\`bash"
 time $HOME/git/nvm/v0.6.20/bin/node fibonacci.js
 echo "\`\`\`\n"
 
+$HOME/git/nvm/v0.6.21/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.6.21/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.7.12/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.7.12/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.8.0/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.8.0/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.8.1/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.8.1/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.8.3/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.8.3/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.8.6/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.8.6/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.8.7/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.8.7/bin/node fibonacci.js
+echo "\`\`\`\n"
+
 $HOME/git/nvm/v0.8.8/bin/node -v
 echo "\n\`\`\`bash"
 time $HOME/git/nvm/v0.8.8/bin/node fibonacci.js
+echo "\`\`\`\n"
+
+$HOME/git/nvm/v0.9.1/bin/node -v
+echo "\n\`\`\`bash"
+time $HOME/git/nvm/v0.9.1/bin/node fibonacci.js
 echo "\`\`\`\n"
 
 echo "### nodejs + cpp module"
@@ -155,6 +210,18 @@ echo "\n\`\`\`"
 
 echo "\n\`\`\`bash"
 time pypy fibonacci.py
+echo "\`\`\`\n"
+
+echo "### ruby 1.9.x"
+
+echo "\n\`\`\`ruby"
+cat fibonacci.rb
+echo "\n\`\`\`"
+
+/usr/local/Cellar/ruby/1.9.3-p194/bin/ruby -v
+
+echo "\n\`\`\`bash"
+time /usr/local/Cellar/ruby/1.9.3-p194/bin/ruby fibonacci.rb
 echo "\`\`\`\n"
 
 echo "### lua"
@@ -221,12 +288,13 @@ echo "\n\`\`\`bash"
 time perl fibonacci.pl
 echo "\`\`\`\n"
 
-echo "### ruby"
-ruby -v | head -1
+echo "### ruby 1.8.x"
 
 echo "\n\`\`\`ruby"
 cat fibonacci.rb
 echo "\n\`\`\`"
+
+ruby -v | head -1
 
 echo "\n\`\`\`bash"
 time ruby fibonacci.rb
