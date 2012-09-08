@@ -38,6 +38,18 @@ time ./a.out
 echo "\`\`\`\n"
 rm a.out
 
+echo "### java"
+java -version
+echo "\n\`\`\`java"
+cat Fibonacci.java
+echo "\n\`\`\`"
+javac Fibonacci.java
+
+echo "\n\`\`\`bash"
+time java Fibonacci
+echo "\`\`\`\n"
+rm Fibonacci.class
+
 echo "### go"
 go version
 echo "\n\`\`\`go"

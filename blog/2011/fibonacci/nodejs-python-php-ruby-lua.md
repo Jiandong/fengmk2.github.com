@@ -27,52 +27,60 @@ If you want to help add more dynamic languagues, please leave the **implement co
 
 ## Results
 
-(^_^) c > go > luajit > nodejs > pypy > lua > python > php > perl > ruby (T_T)
+(^_^) c > java > go > luajit > nodejs > pypy > lua > python > php > perl > ruby (T_T)
 
 <table>
   <tr><th>Language</th><th>Times (user)</th><th>Position</th><th>Version</th></tr>
   <tr>
     <td style="color: green;">c with -O2</td><td>0m0.187s</td><td>#0</td>
-    <td>i686-apple-darwin11-llvm-gcc-4.2 (GCC) 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)</td>
+    <td>i686-apple-darwin11-llvm-gcc-4.2 (GCC) 4.2.1 <br/>
+      (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+    </td>
   </tr>
   <tr>
     <td style="color: green;">node + cpp module</td><td>0m1.417s</td><td>#1</td>
     <td>v0.8.8, gcc -O2</td>
   </tr>
   <tr>
-    <td style="color: green;">go</td><td>0m1.664s</td><td>#2</td>
+    <td style="color: green;">go</td><td>0m1.275s</td><td>#2</td>
+    <td>Java(TM) SE Runtime Environment (build 1.6.0_35-b10-428-11M3811)<br/>
+      Java HotSpot(TM) 64-Bit Server VM (build 20.10-b01-428, mixed mode)
+    </td>
+  </tr>
+  <tr>
+    <td style="color: green;">go</td><td>0m1.664s</td><td>#3</td>
     <td>go version go1.0.2</td>
   </tr>
   <tr>
-    <td style="color: green;">luajit</td><td>0m2.463s</td><td>#3</td>
+    <td style="color: green;">luajit</td><td>0m2.463s</td><td>#4</td>
     <td>LuaJIT 2.0.0-beta10 -- Copyright (C) 2005-2012 Mike Pall.</td>
   </tr>
   <tr>
-    <td style="color: green;">nodejs</td><td>0m2.826s</td><td>#4</td>
+    <td style="color: green;">nodejs</td><td>0m2.826s</td><td>#5</td>
     <td>v0.8.8</td>
   </tr>
   <tr>
-    <td>pypy</td><td>0m29.650s</td><td>#5</td>
+    <td>pypy</td><td>0m29.650s</td><td>#6</td>
     <td>Python 2.7.2 (341e1e3821ff, Jun 07 2012, 15:42:54) [PyPy 1.9.0 with GCC 4.2.1]</td>
   </tr>
   <tr>
-    <td>lua</td><td>0m42.944s</td><td>#6</td>
+    <td>lua</td><td>0m42.944s</td><td>#7</td>
     <td>Lua 5.1.4 Copyright (C) 1994-2008 Lua.org, PUC-Rio</td>
   </tr>
   <tr>
-    <td style="color: red;">python</td><td>1m19.029s</td><td>#7</td>
+    <td style="color: red;">python</td><td>1m19.029s</td><td>#8</td>
     <td>Python 2.7.2</td>
   </tr>
   <tr>
-    <td style="color: red;">php</td><td>1m43.355s</td><td>#8</td>
+    <td style="color: red;">php</td><td>1m43.355s</td><td>#9</td>
     <td>PHP 5.3.13 with Suhosin-Patch (cli) (built: Jun 20 2012 17:05:20)</td>
   </tr>
   <tr>
-    <td style="color: red;">perl</td><td>2m30.444s</td><td>#9</td>
+    <td style="color: red;">perl</td><td>2m30.444s</td><td>#10</td>
     <td>This is perl 5, version 12, subversion 4 (v5.12.4) built for darwin-thread-multi-2level</td>
   </tr>
   <tr>
-    <td style="color: red;">ruby</td><td>3m32.074s</td><td>#10</td>
+    <td style="color: red;">ruby</td><td>3m32.074s</td><td>#11</td>
     <td>ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]</td>
   </tr>
 </table>
@@ -138,6 +146,35 @@ gcc -O3
 real  0m0.199s
 user  0m0.187s
 sys 0m0.002s
+```
+
+### java
+java version "1.6.0_35"
+Java(TM) SE Runtime Environment (build 1.6.0_35-b10-428-11M3811)
+Java HotSpot(TM) 64-Bit Server VM (build 20.10-b01-428, mixed mode)
+
+```java
+public class Fibonacci {
+  public static int fib(int n) {
+    if (n < 2) {
+      return 1;
+    } else {
+     return fib(n - 1) + fib(n - 2);
+    }
+  }
+
+  public static void main(String[] args) {
+    System.out.print(fib(40) + "\n");
+  }
+}
+```
+
+```bash
+165580141
+
+real  0m1.434s
+user  0m1.275s
+sys 0m0.059s
 ```
 
 ### go
