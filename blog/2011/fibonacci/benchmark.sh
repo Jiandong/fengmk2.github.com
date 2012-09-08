@@ -50,6 +50,18 @@ time java Fibonacci
 echo "\`\`\`\n"
 rm Fibonacci.class
 
+echo "### scala"
+scala -version
+echo "\n\`\`\`scala"
+cat Fibonacci.scala
+echo "\n\`\`\`"
+scalac Fibonacci.scala
+
+echo "\n\`\`\`bash"
+time scala Fibonacci
+echo "\`\`\`\n"
+rm Fibonacci$.class Fibonacci.class
+
 echo "### go"
 go version
 echo "\n\`\`\`go"
