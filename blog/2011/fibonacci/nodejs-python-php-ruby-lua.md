@@ -22,6 +22,7 @@ I implement the **fibonacci function** in other **[Dynamic Languages](http://en.
 
 * [c](http://en.wikipedia.org/wiki/C_programming_language)
 * [go](http://golang.org/)
+* [java](http://www.java.com/)
 
 If you want to help add more dynamic languagues, please leave the **implement code** in comments.
 
@@ -42,7 +43,7 @@ If you want to help add more dynamic languagues, please leave the **implement co
     <td>v0.8.8, gcc -O2</td>
   </tr>
   <tr>
-    <td style="color: green;">go</td><td>0m1.275s</td><td>#2</td>
+    <td style="color: green;">java</td><td>0m1.275s</td><td>#2</td>
     <td>Java(TM) SE Runtime Environment (build 1.6.0_35-b10-428-11M3811)<br/>
       Java HotSpot(TM) 64-Bit Server VM (build 20.10-b01-428, mixed mode)
     </td>
