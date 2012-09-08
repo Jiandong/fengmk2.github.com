@@ -56,7 +56,7 @@ I implement the <strong>fibonacci function</strong> in other <strong><a href="ht
 
 </p>
 <h2>Results</h2>
-<p>(^_^) c &gt; java &gt; go &gt; luajit &gt; nodejs &gt; pypy &gt; lua &gt; python &gt; php &gt; perl &gt; ruby (T_T)
+<p>(^_^) c &gt; java &gt; go &gt; luajit &gt; nodejs &gt; pypy &gt; lua &gt; php &gt; python &gt; perl &gt; ruby (T_T)
 
 </p>
 <table>
@@ -98,12 +98,12 @@ I implement the <strong>fibonacci function</strong> in other <strong><a href="ht
     <td>Lua 5.1.4 Copyright (C) 1994-2008 Lua.org, PUC-Rio</td>
   </tr>
   <tr>
-    <td style="color: red;">python</td><td>1m19.029s</td><td>#8</td>
-    <td>Python 2.7.2</td>
+    <td style="color: red;">php</td><td>1m17.557s</td><td>#8</td>
+    <td>PHP 5.4.6 (cli) (built: Sep  8 2012 23:49:53) </td>
   </tr>
   <tr>
-    <td style="color: red;">php</td><td>1m43.355s</td><td>#9</td>
-    <td>PHP 5.3.13 with Suhosin-Patch (cli) (built: Jun 20 2012 17:05:20)</td>
+    <td style="color: red;">python</td><td>1m19.078s</td><td>#9</td>
+    <td>Python 2.7.2</td>
   </tr>
   <tr>
     <td style="color: red;">perl</td><td>2m30.444s</td><td>#10</td>
@@ -372,9 +372,17 @@ sys 0m0.082s</code></pre>
 print fibonacci(40)</code></pre>
 <pre><code class="lang-bash">165580141
 
-real  1m21.027s
-user  1m19.029s
-sys 0m0.200s</code></pre>
+real  2m16.669s
+user  1m19.078s
+sys 0m0.757s</code></pre>
+<p>Jython 2.5.2
+
+</p>
+<pre><code class="lang-bash">165580141
+
+real  1m28.033s
+user  0m54.901s
+sys 0m2.335s</code></pre>
 <h3>php</h3>
 <p>PHP 5.3.13 with Suhosin-Patch (cli) (built: Jun 20 2012 17:05:20) 
 
@@ -393,6 +401,14 @@ echo fibonacci(40).&quot;\n&quot;;
 real  1m46.118s
 user  1m43.355s
 sys 0m0.250s</code></pre>
+<p>PHP 5.4.6 (cli) (built: Sep  8 2012 23:49:53) 
+
+</p>
+<pre><code class="lang-bash">165580141
+
+real  2m0.839s
+user  1m17.557s
+sys 0m0.639s</code></pre>
 <h3>perl</h3>
 <p>This is perl 5, version 12, subversion 4 (v5.12.4) built for darwin-thread-multi-2level
 

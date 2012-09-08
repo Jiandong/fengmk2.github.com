@@ -28,7 +28,7 @@ If you want to help add more dynamic languagues, please leave the **implement co
 
 ## Results
 
-(^_^) c > java > go > luajit > nodejs > pypy > lua > python > php > perl > ruby (T_T)
+(^_^) c > java > go > luajit > nodejs > pypy > lua > php > python > perl > ruby (T_T)
 
 <table>
   <tr><th>Language</th><th>Times (user)</th><th>Position</th><th>Version</th></tr>
@@ -69,12 +69,12 @@ If you want to help add more dynamic languagues, please leave the **implement co
     <td>Lua 5.1.4 Copyright (C) 1994-2008 Lua.org, PUC-Rio</td>
   </tr>
   <tr>
-    <td style="color: red;">python</td><td>1m19.029s</td><td>#8</td>
-    <td>Python 2.7.2</td>
+    <td style="color: red;">php</td><td>1m17.557s</td><td>#8</td>
+    <td>PHP 5.4.6 (cli) (built: Sep  8 2012 23:49:53) </td>
   </tr>
   <tr>
-    <td style="color: red;">php</td><td>1m43.355s</td><td>#9</td>
-    <td>PHP 5.3.13 with Suhosin-Patch (cli) (built: Jun 20 2012 17:05:20)</td>
+    <td style="color: red;">python</td><td>1m19.078s</td><td>#9</td>
+    <td>Python 2.7.2</td>
   </tr>
   <tr>
     <td style="color: red;">perl</td><td>2m30.444s</td><td>#10</td>
@@ -411,9 +411,19 @@ print fibonacci(40)
 ```bash
 165580141
 
-real  1m21.027s
-user  1m19.029s
-sys 0m0.200s
+real  2m16.669s
+user  1m19.078s
+sys 0m0.757s
+```
+
+Jython 2.5.2
+
+```bash
+165580141
+
+real  1m28.033s
+user  0m54.901s
+sys 0m2.335s
 ```
 
 ### php
@@ -437,6 +447,16 @@ echo fibonacci(40)."\n";
 real  1m46.118s
 user  1m43.355s
 sys 0m0.250s
+```
+
+PHP 5.4.6 (cli) (built: Sep  8 2012 23:49:53) 
+
+```bash
+165580141
+
+real  2m0.839s
+user  1m17.557s
+sys 0m0.639s
 ```
 
 ### perl

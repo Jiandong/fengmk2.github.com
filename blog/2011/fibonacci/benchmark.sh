@@ -165,7 +165,7 @@ echo "\n\`\`\`bash"
 time lua fibonacci.lua.local
 echo "\`\`\`\n"
 
-echo "### python"
+echo "### python && jython"
 python -V
 
 echo "\n\`\`\`py"
@@ -174,6 +174,11 @@ echo "\n\`\`\`"
 
 echo "\n\`\`\`bash"
 time python fibonacci.py
+echo "\`\`\`\n"
+
+/usr/local/Cellar/jython/2.5.2/libexec/jython --version
+echo "\n\`\`\`bash"
+time /usr/local/Cellar/jython/2.5.2/libexec/jython fibonacci.py
 echo "\`\`\`\n"
 
 echo "### php"
@@ -185,6 +190,12 @@ echo "\n\`\`\`"
 
 echo "\n\`\`\`bash"
 time php fibonacci.php
+echo "\`\`\`\n"
+
+$HOME/apps/php-5.4.6/sapi/cli/php -v | head -1
+
+echo "\n\`\`\`bash"
+time $HOME/apps/php-5.4.6/sapi/cli/php fibonacci.php
 echo "\`\`\`\n"
 
 echo "### perl"
