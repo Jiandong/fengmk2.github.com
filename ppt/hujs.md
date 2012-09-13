@@ -127,6 +127,10 @@ RedisStore.prototype.get = function(sid, fn){
 
 ---
 
+# Do not try catch the callback<br/>不要捕获回调函数的异常
+
+---
+
 ## 40ms RT delayed<br/>响应延时了40毫秒
 
 ### As we know, [http.Agent](https://github.com/joyent/node/blob/master/lib/http.js#L1012) don't not support really `keepalive`. So I wrote the [agentkeepalive](https://github.com/TBEDP/agentkeepalive) to support this feature.
@@ -369,29 +373,31 @@ new connection: 3331
 ![mongodb cpu](./hujs2012/mongodb.jpg)
 
 ### The problem is reappear.
+### 问题总算被重现了。
 
 ---
 
-## Search the source code
+## Search the source code<br/>从代码中找答案
 
 ### I found out the problem, it eat the CPU by [`/lib/mongodb/connection/connection_pool.js`](https://github.com/mongodb/node-mongodb-native/blob/master/lib/mongodb/connection/connection_pool.js) .
+### 经过一轮的代码阅读，我找到将CPU吃光的代码了：[`/lib/mongodb/connection/connection_pool.js`](https://github.com/mongodb/node-mongodb-native/blob/master/lib/mongodb/connection/connection_pool.js) 。
 
 ---
 
-## Show me the code
+## Show me the code | 上代码吧
 
 ```js
 connection.on("connect", function(err, connection) {
   // Add connection to list of open connections
   _self.openConnections.push(connection);
-  // If the number of open connections is equal to the poolSize signal ready pool
+  // If the number of open connections is equal to the poolSize
   if(_self.openConnections.length === _self.poolSize && _self._poolState !== 'disconnected') {
     // Set connected
     _self._poolState = 'connected';
     // Emit pool ready
     _self.emit("poolReady");
   } else if(_self.openConnections.length < _self.poolSize) {
-    // We need to open another connection, make sure it's in the next
+    // need to open another connection, make sure it's in the next
     // tick so we don't get a cascade of errors
     process.nextTick(function() {
       _connect(_self);
@@ -402,9 +408,9 @@ connection.on("connect", function(err, connection) {
 
 ---
 
-### when `_self.openConnections.length < _self.poolSize`, connection pool will create a new connection in `nextTick`.
+### when `openConnections.length < poolSize`, pool will create a new connection in `nextTick`.
 
-### But the meantime, if the openning connection `emit('close')`, this `_self.openConnections` will be cleanup to `0`.
+### But in meantime, if the openning connection `emit('close')`, this `openConnections.length` will be cleanup to `0`.
 
 ```js
 connection.on("close", function() {
@@ -420,6 +426,7 @@ connection.on("close", function() {
 ```
 
 ### This case will be `Infinite loop`, open, close, open, close...
+### 这就导致了死循环，不断地 open, close, open, close...
 
 ---
 
@@ -427,7 +434,7 @@ connection.on("close", function() {
 
 ---
 
-# Waiting for your pull request on [node-mongodb-native#675](https://github.com/mongodb/node-mongodb-native/issues/675)
+# Waiting for your pull request on [node-mongodb-native](https://github.com/mongodb/node-mongodb-native)
 
 ---
 
@@ -441,3 +448,7 @@ connection.on("close", function() {
 ## 也便成了高速公路。
 
 ### (@GoddyZhao, please help me to translate this.)
+
+---
+
+# hujs.emit(`'Thanks'`) <br/>&&<br/> console.log(`'end'`);

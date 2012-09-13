@@ -149,6 +149,9 @@
 };</code></pre>
 </section>
 
+<section class="slide"><h1>Do not try catch the callback<br/>不要捕获回调函数的异常</h1>
+</section>
+
 <section class="slide"><h2>40ms RT delayed<br/>响应延时了40毫秒</h2>
 <h3>As we know, <a href="https://github.com/joyent/node/blob/master/lib/http.js#L1012">http.Agent</a> don&#39;t not support really <code>keepalive</code>. So I wrote the <a href="https://github.com/TBEDP/agentkeepalive">agentkeepalive</a> to support this feature.</h3>
 <h3>我们知道，<a href="https://github.com/joyent/node/blob/master/lib/http.js#L1012">http.Agent</a> 并不支持真正意义上的<code>keepalive</code>。所以我写了<a href="https://github.com/TBEDP/agentkeepalive">agentkeepalive</a>模块支持这个特性。</h3>
@@ -331,24 +334,26 @@ new connection: 3331</code></pre>
 
 </p>
 <h3>The problem is reappear.</h3>
+<h3>问题总算被重现了。</h3>
 </section>
 
-<section class="slide"><h2>Search the source code</h2>
+<section class="slide"><h2>Search the source code<br/>从代码中找答案</h2>
 <h3>I found out the problem, it eat the CPU by <a href="https://github.com/mongodb/node-mongodb-native/blob/master/lib/mongodb/connection/connection_pool.js"><code>/lib/mongodb/connection/connection_pool.js</code></a> .</h3>
+<h3>经过一轮的代码阅读，我找到将CPU吃光的代码了：<a href="https://github.com/mongodb/node-mongodb-native/blob/master/lib/mongodb/connection/connection_pool.js"><code>/lib/mongodb/connection/connection_pool.js</code></a> 。</h3>
 </section>
 
-<section class="slide"><h2>Show me the code</h2>
+<section class="slide"><h2>Show me the code | 上代码吧</h2>
 <pre><code class="lang-js">connection.on(&quot;connect&quot;, function(err, connection) {
   // Add connection to list of open connections
   _self.openConnections.push(connection);
-  // If the number of open connections is equal to the poolSize signal ready pool
+  // If the number of open connections is equal to the poolSize
   if(_self.openConnections.length === _self.poolSize &amp;&amp; _self._poolState !== &#39;disconnected&#39;) {
     // Set connected
     _self._poolState = &#39;connected&#39;;
     // Emit pool ready
     _self.emit(&quot;poolReady&quot;);
   } else if(_self.openConnections.length &lt; _self.poolSize) {
-    // We need to open another connection, make sure it&#39;s in the next
+    // need to open another connection, make sure it&#39;s in the next
     // tick so we don&#39;t get a cascade of errors
     process.nextTick(function() {
       _connect(_self);
@@ -357,8 +362,8 @@ new connection: 3331</code></pre>
 });</code></pre>
 </section>
 
-<section class="slide"><h3>when <code>_self.openConnections.length &lt; _self.poolSize</code>, connection pool will create a new connection in <code>nextTick</code>.</h3>
-<h3>But the meantime, if the openning connection <code>emit(&#39;close&#39;)</code>, this <code>_self.openConnections</code> will be cleanup to <code>0</code>.</h3>
+<section class="slide"><h3>when <code>openConnections.length &lt; poolSize</code>, pool will create a new connection in <code>nextTick</code>.</h3>
+<h3>But in meantime, if the openning connection <code>emit(&#39;close&#39;)</code>, this <code>openConnections.length</code> will be cleanup to <code>0</code>.</h3>
 <pre><code class="lang-js">connection.on(&quot;close&quot;, function() {
   // If we are already disconnected ignore the event
   if(_self._poolState !== &#39;disconnected&#39; &amp;&amp; _self.listeners(&quot;close&quot;).length &gt; 0) {
@@ -370,12 +375,13 @@ new connection: 3331</code></pre>
   _self.stop();
 });</code></pre>
 <h3>This case will be <code>Infinite loop</code>, open, close, open, close...</h3>
+<h3>这就导致了死循环，不断地 open, close, open, close...</h3>
 </section>
 
 <section class="slide"><h1>How to fixed this?<br/>如何修复？</h1>
 </section>
 
-<section class="slide"><h1>Waiting for your pull request on <a href="https://github.com/mongodb/node-mongodb-native/issues/675">node-mongodb-native#675</a></h1>
+<section class="slide"><h1>Waiting for your pull request on <a href="https://github.com/mongodb/node-mongodb-native">node-mongodb-native</a></h1>
 </section>
 
 <section class="slide"><h2>Conclusion 总结</h2>
@@ -388,6 +394,9 @@ new connection: 3331</code></pre>
 <h2>码路上本有千奇百怪的坑，踩的人多了，</h2>
 <h2>也便成了高速公路。</h2>
 <h3>(@GoddyZhao, please help me to translate this.)</h3>
+</section>
+
+<section class="slide"><h1>hujs.emit(<code>&#39;Thanks&#39;</code>) <br/>&amp;&amp;<br/> console.log(<code>&#39;end&#39;</code>);</h1>
 </section>
 
 
