@@ -1,4 +1,5 @@
-# Code traps in Nodejs<br/>在Nodejs上踩过的坑 
+# Code traps in Nodejs<br/>在Nodejs上踩过的坑
+2012-09-14 at 沪JS@2012
 
 ---
 
@@ -6,7 +7,12 @@
 
 ### Alibaba Data EDP
 ### 阿里巴巴数据平台EDP，花名@苏千
-### Github: @`fengmk2`
+### Chinese nodejs community: [cnodejs.org](http://cnodejs.org)
+
+<hr/>
+
+### Github: @[fengmk2](https://github.com/fengmk2/)
+### Blog: http://fengmk2.github.com
 ### Twitter: @fengmk2
 ### Weibo: @Python发烧友 , @FaWave
 
@@ -15,6 +21,7 @@
 ---
 
 ![我在TDC2012](./hujs2012/nodejs-tdc2011.png)
+@nodejs workshop on TDC2011
 
 ---
 
@@ -450,5 +457,7 @@ connection.on("close", function() {
 ### (@GoddyZhao, please help me to translate this.)
 
 ---
+
+[http://fengmk2.github.com/ppt/hujs.html](http://fengmk2.github.com/ppt/hujs.html)
 
 # hujs.emit(`'Thanks'`) <br/>&&<br/> console.log(`'end'`);
