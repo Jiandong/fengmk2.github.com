@@ -2,6 +2,8 @@
 
 ## Articles
 
+* [Node.js: Style and structure](http://caolanmcmahon.com/posts/nodejs_style_and_structure/)
+* [Why Node.JS is absolutely terrible](http://dev.hasenj.org/post/31042963934/nodejs-hate)
 * [Node.js w/1M concurrent connections!](http://blog.caustik.com/2012/08/19/node-js-w1m-concurrent-connections/)
 * [Escape the 1.4GB V8 heap limit in Node.js!](http://blog.caustik.com/2012/04/11/escape-the-1-4gb-v8-heap-limit-in-node-js/)
 * [Node.js Frameworks Comparison](http://ocdevel.com/blog/nodejs-frameworks-comparison)
